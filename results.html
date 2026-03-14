@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Results — Leadhaus Studios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nlm"><span>L</span><div class="nlr"></div><span>H</span></div>
+    LEADHAUS
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="packages.html">Packages</a></li>
+    <li><a href="results.html" class="active">Results</a></li>
+    <li><a href="creators.html">For Creators</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right"><a href="contact.html" class="nav-cta">Book a Call</a></div>
+</nav>
+<main>
+<section class="res-hero">
+    <div class="sec-label fade-up">Results</div>
+    <h2 class="fade-up d1">Numbers We've<br/><em>Delivered</em></h2>
+    <p class="fade-up d2">Real campaigns. Real businesses. Real leads. Every number below came from a client in Lagos.</p>
+  </section>
+  <div class="stats-bar">
+    <div class="stat-box fade-up"><div class="sbl">Total Leads Delivered</div><div class="sbn">148<span>+</span></div><div class="sbsub">Across all campaigns</div></div>
+    <div class="stat-box fade-up d1"><div class="sbl">Lowest Cost Per Lead</div><div class="sbn"><span>&#8358;</span>820</div><div class="sbsub">Food campaign &middot; TikTok</div></div>
+    <div class="stat-box fade-up d2"><div class="sbl">Highest Engagement Rate</div><div class="sbn">9<span>%</span></div><div class="sbsub">Nano creator &middot; food niche</div></div>
+    <div class="stat-box fade-up d3"><div class="sbl">Avg Return on Ad Spend</div><div class="sbn">4<span>x</span></div><div class="sbsub">Across paid campaigns</div></div>
+  </div>
+  <section class="cases">
+    <div class="cases-hd fade-up">Campaign Case Studies</div>
+    <div class="case-g">
+      <div class="case fade-up">
+        <div class="case-left"><div class="case-tag">Fashion &mdash; Lagos Island</div><div class="case-brand">New Collection Launch</div><div class="case-niche">Fashion &amp; Retail</div><div class="case-meta">4 weeks &middot; &#8358;150k ad spend</div></div>
+        <div class="case-m"><div class="case-ml">DM Leads Week One</div><div class="case-mv">47<span>+</span></div><div class="case-quote">"We launched and had 47 enquiries in the first week."</div></div>
+        <div class="case-m"><div class="case-ml">Total Reach</div><div class="case-mv">82<span>k</span></div><div class="case-ms">Instagram + Meta</div></div>
+        <div class="case-m"><div class="case-ml">Cost Per Lead</div><div class="case-mv"><span>&#8358;</span>3.2k</div><div class="case-ms">Client renewed immediately</div></div>
+      </div>
+      <div class="case fade-up">
+        <div class="case-left"><div class="case-tag">Food &mdash; Surulere</div><div class="case-brand">Weekend Delivery Push</div><div class="case-niche">Food &amp; Restaurant</div><div class="case-meta">3 days &middot; &#8358;50k gifted collab</div></div>
+        <div class="case-m"><div class="case-ml">Orders in 3 Days</div><div class="case-mv">61<span>+</span></div><div class="case-quote">"We had to hire more delivery riders after this campaign."</div></div>
+        <div class="case-m"><div class="case-ml">Video Views</div><div class="case-mv">98<span>k</span></div><div class="case-ms">TikTok creator collab</div></div>
+        <div class="case-m"><div class="case-ml">Cost Per Lead</div><div class="case-mv"><span>&#8358;</span>820</div><div class="case-ms">&#8358;50k gifted &gt; &#8358;200k paid spend</div></div>
+      </div>
+      <div class="case fade-up">
+        <div class="case-left"><div class="case-tag">Beauty &mdash; Lekki</div><div class="case-brand">Valentine Promo</div><div class="case-niche">Beauty &amp; Wellness</div><div class="case-meta">5 days &middot; &#8358;60k gifted deal</div></div>
+        <div class="case-m"><div class="case-ml">Bookings in 5 Days</div><div class="case-mv">22<span>+</span></div><div class="case-quote">"Our appointment book was full two weeks after launch."</div></div>
+        <div class="case-m"><div class="case-ml">Engagement Rate</div><div class="case-mv">8.3<span>%</span></div><div class="case-ms">Nano creator &middot; 5,600 followers</div></div>
+        <div class="case-m"><div class="case-ml">Cost Per Booking</div><div class="case-mv"><span>&#8358;</span>2.7k</div><div class="case-ms">Outperformed paid ads</div></div>
+      </div>
+    </div>
+    <div class="coming fade-up">
+      <strong>More Case Studies Coming</strong>
+      <p>We are onboarding new clients across skincare, short-lets, and the coaching niche. Results documented as they come in.</p>
+      <a class="btn-p" href="contact.html">Ready To Be The Next Result?</a>
+    </div>
+  </section>
+  <footer><div class="fl">Lead<span>haus</span> Studios</div><p>Content that converts. Systems that scale.</p><p>&copy; 2025 Leadhaus Studios. Lagos, Nigeria.</p></footer>
+</main>
+<script>
+
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v');});},{threshold:.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+setTimeout(()=>{document.querySelectorAll('.fade-up').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('v');});},100);
+
+</script>
+</body>
+</html>

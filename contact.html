@@ -5,16 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book a Call — Leadhaus Studios</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://assets.calendly.com/assets/external/widget.js"
-      type="text/javascript"
-      async
-    ></script>
   </head>
   <body>
     <nav>
@@ -34,7 +26,7 @@
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
       <div class="nav-right">
-        <a href="contact.html" class="nav-cta">Book a Call</a>
+        <a href="https://calendly.com/leadhaus/30min" target="_blank" class="nav-cta">Book a Call</a>
       </div>
     </nav>
 
@@ -50,16 +42,7 @@
               conversation about your business and whether we're the right fit.
             </p>
             <div class="ct-ctas fade-up d3">
-              <a
-                href="#"
-                class="ct-cta-row"
-                onclick="
-                  Calendly.initPopupWidget({
-                    url: 'https://calendly.com/leadhaus/30min',
-                  });
-                  return false;
-                "
-              >
+              <a href="https://calendly.com/leadhaus/30min" target="_blank" class="ct-cta-row">
                 <div class="ct-cta-icon">&#128197;</div>
                 <div class="ct-cta-text">
                   <h4>Book a Call</h4>
@@ -79,17 +62,13 @@
             <div class="ct-det-item">
               <div class="dl">Email</div>
               <div class="dv">
-                <a href="mailto:hello@leadhausstudios.com"
-                  >hello@leadhausstudios.com</a
-                >
+                <a href="mailto:hello@leadhausstudios.com">hello@leadhausstudios.com</a>
               </div>
             </div>
             <div class="ct-det-item">
               <div class="dl">Instagram</div>
               <div class="dv">
-                <a href="https://instagram.com/leadhausstudios" target="_blank"
-                  >@leadhausstudios</a
-                >
+                <a href="https://instagram.com/leadhausstudios" target="_blank">@leadhausstudios</a>
               </div>
             </div>
             <div class="ct-det-item">
@@ -106,16 +85,16 @@
           </p>
           <div class="ct-form fade-up d2">
             <div class="ct-f">
-              <label>Full Name *</label
-              ><input type="text" placeholder="Your name" />
+              <label>Full Name *</label>
+              <input type="text" placeholder="Your name" />
             </div>
             <div class="ct-f">
-              <label>Business / Brand Name *</label
-              ><input type="text" placeholder="Your brand" />
+              <label>Business / Brand Name *</label>
+              <input type="text" placeholder="Your brand" />
             </div>
             <div class="ct-f">
-              <label>WhatsApp Number *</label
-              ><input type="tel" placeholder="+234 XXX XXX XXXX" />
+              <label>WhatsApp Number *</label>
+              <input type="tel" placeholder="+234 XXX XXX XXXX" />
             </div>
             <div class="ct-f">
               <label>Industry *</label>
@@ -154,15 +133,12 @@
               </div>
             </div>
             <div class="ct-f">
-              <label>What Are You Trying To Achieve?</label
-              ><textarea
-                placeholder="e.g. We want to launch a new skincare product and get 50+ enquiries in the first month..."
-              ></textarea>
+              <label>What Are You Trying To Achieve?</label>
+              <textarea placeholder="e.g. We want to launch a new skincare product and get 50+ enquiries in the first month..."></textarea>
             </div>
             <div class="ct-submit-row">
-              <span class="ct-small"
-                >We respond within 24 hours on business days.</span
-              ><button class="btn-p">Send Message</button>
+              <span class="ct-small">We respond within 24 hours on business days.</span>
+              <button class="btn-p">Send Message</button>
             </div>
           </div>
         </div>
@@ -175,22 +151,15 @@
     </main>
 
     <script>
-      var obs = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (e) {
-            if (e.isIntersecting) {
-              e.target.classList.add("v");
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-      document.querySelectorAll(".fade-up").forEach(function (el) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('v'); }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.fade-up').forEach(function(el) {
         obs.observe(el);
-      });
-      document.querySelectorAll(".fade-up").forEach(function (el) {
         if (el.getBoundingClientRect().top < window.innerHeight) {
-          el.classList.add("v");
+          el.classList.add('v');
         }
       });
     </script>

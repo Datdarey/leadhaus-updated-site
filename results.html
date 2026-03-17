@@ -15,14 +15,26 @@
     LEADHAUS
   </a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="packages.html">Packages</a></li>
-    <li><a href="results.html" class="active">Results</a></li>
-    <li><a href="creators.html">For Creators</a></li>
-    <li><a href="contact.html">Contact</a></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="packages.html">Packages</a></li>
+  <li><a href="results.html" class="active">Results</a></li>
+  <li><a href="creators.html">For Creators</a></li>
+  <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="nav-right"><a href="contact.html" class="nav-cta">Book a Call</a></div>
+  <div class="nav-right"><a href="https://calendly.com/leadhaus/30min" target="_blank" class="nav-cta">Book a Call</a></div>
+  <button class="nav-burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<ul class="nav-mobile" id="nav-mobile">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="packages.html">Packages</a></li>
+  <li><a href="results.html" class="active">Results</a></li>
+  <li><a href="creators.html">For Creators</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="https://calendly.com/leadhaus/30min" target="_blank">Book a Call</a></li>
+</ul>
+
 <main>
 <section class="res-hero">
     <div class="sec-label fade-up">Results</div>
@@ -71,6 +83,14 @@ const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersec
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 setTimeout(()=>{document.querySelectorAll('.fade-up').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('v');});},100);
 
+
+var burger=document.getElementById('burger'),mob=document.getElementById('nav-mobile');
+if(burger){burger.addEventListener('click',function(){burger.classList.toggle('open');mob.classList.toggle('open');});}
+mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');mob.classList.remove('open');});});
+
+var burger=document.getElementById('burger'),mob=document.getElementById('nav-mobile');
+if(burger){burger.addEventListener('click',function(){burger.classList.toggle('open');mob.classList.toggle('open');});}
+mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');mob.classList.remove('open');});});
 </script>
 </body>
 </html>

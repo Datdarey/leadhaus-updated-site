@@ -5,7 +5,7 @@ body{background:var(--black);color:var(--white);font-family:var(--fb);font-weigh
 body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.022;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:stretch;border-bottom:1px solid var(--border);background:rgba(9,9,14,.93);backdrop-filter:blur(20px);height:64px}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:stretch;border-bottom:1px solid var(--border);background:rgba(9,9,14,.93);backdrop-filter:blur(20px);height:64px;flex-wrap:wrap}
 .nav-logo{display:flex;align-items:center;gap:10px;padding:0 36px 0 40px;font-family:var(--fd);font-weight:900;font-size:16px;letter-spacing:3px;text-transform:uppercase;color:var(--white);text-decoration:none;border-right:1px solid var(--border);white-space:nowrap;flex-shrink:0;cursor:pointer}
 .nlm{display:flex;flex-direction:column;align-items:center;line-height:1}
 .nlm span{font-size:15px}
@@ -20,6 +20,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:str
 .nav-right{display:flex;align-items:center;margin-left:auto;padding:0 40px 0 28px;border-left:1px solid var(--border)}
 .nav-cta{font-family:var(--fd);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--black);background:var(--white);padding:10px 22px;text-decoration:none;transition:background .2s,color .2s;cursor:pointer}
 .nav-cta:hover{background:var(--red);color:var(--white)}
+
+/* HAMBURGER */
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:64px;padding:0 12px;cursor:pointer;background:none;border:none;margin-left:auto;flex-shrink:0}
+.nav-burger span{display:block;width:20px;height:2px;background:var(--white);transition:all .25s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile{display:none;width:100%;background:rgba(9,9,14,.98);border-top:1px solid var(--border);flex-direction:column;list-style:none}
+.nav-mobile.open{display:flex}
+.nav-mobile li a{display:block;padding:16px 24px;font-size:12px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--dim);text-decoration:none;border-bottom:1px solid var(--border);transition:color .2s,background .2s}
+.nav-mobile li a:hover,.nav-mobile li a.active{color:var(--white);background:rgba(255,255,255,.025)}
+.nav-mobile li:last-child a{color:var(--black);background:var(--white);font-family:var(--fd);font-weight:700;letter-spacing:2px}
+.nav-mobile li:last-child a:hover{background:var(--red);color:var(--white)}
 
 /* PAGES */
 main{display:block;min-height:100vh;padding-top:64px;animation:fadeIn .35s ease forwards}
@@ -277,8 +290,10 @@ h1 em{font-style:italic;color:var(--red)}
 /* RESPONSIVE */
 @media(max-width:960px){
   .nav-links{display:none}
-  nav{padding:0 24px}
-  .nav-logo{padding:0 20px}
+  .nav-burger{display:flex}
+  nav{padding:0;flex-wrap:wrap;height:auto;min-height:64px}
+  .nav-logo{height:64px;padding:0 20px}
+  .nav-right{display:none}
   .hero,.what,.inds,.proc,.team-sec,.res-hero,.cases,.pkg-hero,.pkgs,.addons,.cr-hero,.cr-who,.cr-why,.cr-niches,.cr-form,.ct-left,.ct-right{padding-left:24px;padding-right:24px}
   h1{font-size:52px}
   .what-g,.ct-wrap{grid-template-columns:1fr}
@@ -292,5 +307,5 @@ h1 em{font-style:italic;color:var(--red)}
   .cr-ben{grid-template-columns:48px 1fr}.cb-tag{display:none}
   .hero-nums{display:none}
   footer{flex-direction:column;gap:8px;text-align:center;padding:20px 24px}
+  main{padding-top:64px}
 }
-main{display:block;min-height:100vh;padding-top:64px;animation:fadeIn .35s ease forwards}

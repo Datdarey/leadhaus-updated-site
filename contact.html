@@ -169,7 +169,33 @@ var burger=document.getElementById('burger'),mob=document.getElementById('nav-mo
 if(burger){burger.addEventListener('click',function(){burger.classList.toggle('open');mob.classList.toggle('open');});}
 mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');mob.classList.remove('open');});});
 </script><script>
-      var obs = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (e)
-                          </script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      e.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.fade-up').forEach((el) => {
+  obs.observe(el);
+});
+
+// Mobile nav
+var burger = document.getElementById('burger'),
+    mob = document.getElementById('nav-mobile');
+
+if (burger) {
+  burger.addEventListener('click', function () {
+    burger.classList.toggle('open');
+    mob.classList.toggle('open');
+  });
+}
+
+mob.querySelectorAll('a').forEach(function (a) {
+  a.addEventListener('click', function () {
+    burger.classList.remove('open');
+    mob.classList.remove('open');
+  });
+});
+</script>

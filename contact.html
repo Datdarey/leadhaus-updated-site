@@ -1,18 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book a Call — Leadhaus Studios</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Book a Call — Leadhaus Studios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav>
   <a href="index.html" class="nav-logo">
     <div class="nlm"><span>L</span><div class="nlr"></div><span>H</span></div>
     LEADHAUS
@@ -37,19 +34,14 @@
   <li><a href="contact.html" class="active">Contact</a></li>
   <li><a href="https://calendly.com/leadhaus/30min" target="_blank">Book a Call</a></li>
 </ul>
-
-
-    <main>
+<main>
       <div class="ct-wrap">
         <div class="ct-left">
           <div class="ct-ghost">LET'S GO</div>
-          <div style="position: relative; z-index: 2">
+          <div style="position:relative;z-index:2">
             <div class="sec-label fade-up">Contact</div>
-            <h2 class="fade-up d1">Ready To Get<br /><em>Customers?</em></h2>
-            <p class="fade-up d2">
-              Book a free 30-minute discovery call. No pitch &mdash; just a
-              conversation about your business and whether we're the right fit.
-            </p>
+            <h2 class="fade-up d1">Ready To Get<br/><em>Customers?</em></h2>
+            <p class="fade-up d2">Book a free 30-minute discovery call. No pitch &mdash; just a conversation about your business and whether we're the right fit.</p>
             <div class="ct-ctas fade-up d3">
               <a href="https://calendly.com/leadhaus/30min" target="_blank" class="ct-cta-row">
                 <div class="ct-cta-icon">&#128197;</div>
@@ -88,10 +80,7 @@
         </div>
         <div class="ct-right">
           <h3 class="fade-up">Tell Us About Your Business</h3>
-          <p class="fade-up d1">
-            Fill this in and we'll come prepared. We'll be in touch within 24
-            hours on WhatsApp or email.
-          </p>
+          <p class="fade-up d1">Fill this in and we'll come prepared. We'll be in touch within 24 hours on WhatsApp or email.</p>
           <form action="https://formspree.io/f/mwvrrbro" method="POST" class="ct-form fade-up d2">
             <input type="hidden" name="_subject" value="New Client Enquiry — Leadhaus" />
             <div class="ct-f">
@@ -153,49 +142,18 @@
           </form>
         </div>
       </div>
-      <footer>
-        <div class="fl">Lead<span>haus</span> Studios</div>
-        <p>Content that converts. Systems that scale.</p>
-        <p>&copy; 2025 Leadhaus Studios. Lagos, Nigeria.</p>
-      </footer>
-    </main>
+<footer><div class="fl">Lead<span>haus</span> Studios</div><p>Content that converts. Systems that scale.</p><p>&copy; 2025 Leadhaus Studios. Lagos, Nigeria.</p></footer>
+</main>
+<script>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
-var burger=document.getElementById('burger'),mob=document.getElementById('nav-mobile');
-if(burger){burger.addEventListener('click',function(){burger.classList.toggle('open');mob.classList.toggle('open');});}
-mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');mob.classList.remove('open');});});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});},{threshold:.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+setTimeout(()=>{document.querySelectorAll('.fade-up').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('show');});},100);
+
 
 var burger=document.getElementById('burger'),mob=document.getElementById('nav-mobile');
 if(burger){burger.addEventListener('click',function(){burger.classList.toggle('open');mob.classList.toggle('open');});}
-mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');mob.classList.remove('open');});});
-</script><script>
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach((e) => {
-    if (e.isIntersecting) {
-      e.target.classList.add('show');
-    }
-  });
-});
-
-document.querySelectorAll('.fade-up').forEach((el) => {
-  obs.observe(el);
-});
-
-// Mobile nav
-var burger = document.getElementById('burger'),
-    mob = document.getElementById('nav-mobile');
-
-if (burger) {
-  burger.addEventListener('click', function () {
-    burger.classList.toggle('open');
-    mob.classList.toggle('open');
-  });
-}
-
-mob.querySelectorAll('a').forEach(function (a) {
-  a.addEventListener('click', function () {
-    burger.classList.remove('open');
-    mob.classList.remove('open');
-  });
-});
+if(mob){mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');mob.classList.remove('open');});});}
 </script>
+</body>
+</html>

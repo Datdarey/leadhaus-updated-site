@@ -137,12 +137,13 @@
 </main>
 <script>
 
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v');});},{threshold:.1});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});},{threshold:.1});
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
-setTimeout(()=>{document.querySelectorAll('.fade-up').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('v');});},100);
+setTimeout(()=>{document.querySelectorAll('.fade-up').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('show');});},100);
+
 var burger=document.getElementById('burger'),mob=document.getElementById('nav-mobile');
 if(burger){burger.addEventListener('click',function(){burger.classList.toggle('open');mob.classList.toggle('open');});}
-mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');mob.classList.remove('open');});});
+if(mob){mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');mob.classList.remove('open');});});}
 
 </script>
 </body>

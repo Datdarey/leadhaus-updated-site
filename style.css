@@ -47,7 +47,7 @@ main{display:block;min-height:100vh;padding-top:64px;animation:fadeIn .35s ease 
 .btn-g:hover{color:var(--white)}
 .btn-g::after{content:'→';font-size:14px}
 .fade-up{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
-.fade-up.v{opacity:1;transform:translateY(0)}
+.fade-up.show{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 h2{font-family:var(--fd);font-size:clamp(36px,4.5vw,60px);font-weight:900;line-height:.95;text-transform:uppercase;letter-spacing:-1px;margin-bottom:16px}
 h2 em{color:var(--red);font-style:italic}

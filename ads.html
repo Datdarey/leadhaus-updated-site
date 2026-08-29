@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Free Ad Strategy Call — Leadhaus Studios</title>
+<title>Turn Your Ad Spend Into A Predictable Acquisition System — Leadhaus Studios</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
 <style>
@@ -206,19 +206,33 @@ h1 em{font-style:italic;color:var(--red)}
 .res-cta h3{font-family:var(--fd);font-size:clamp(28px,3vw,44px);font-weight:900;text-transform:uppercase;margin-bottom:10px}
 .res-cta p{font-size:14px;color:var(--dim);margin-bottom:28px}
 
+/* CLARITY / AUDIT STRIP */
+.cl-sec{padding:0 48px 80px}
+.cl-hd{margin-bottom:1px}
+.cl-hd h3{font-family:var(--fd);font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:8px}
+.cl-hd p{font-size:14px;color:var(--dim);max-width:560px;line-height:1.7;margin-bottom:32px}
+.cl-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.cl-c{background:var(--dark);padding:32px 28px;transition:background .2s}
+.cl-c:hover{background:var(--card)}
+.cl-tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.cl-name{font-family:var(--fd);font-size:22px;font-weight:800;text-transform:uppercase;margin-bottom:6px}
+.cl-price{font-family:var(--fd);font-size:30px;font-weight:900;margin-bottom:14px}
+.cl-price span{font-size:13px;color:var(--dim);font-weight:400;font-family:var(--fb)}
+.cl-c p{font-size:13px;color:var(--dim);line-height:1.7;margin-bottom:18px}
+
 /* PACKAGES */
 .pkg-hero{padding:90px 48px 60px;border-bottom:1px solid var(--border)}
 .pkg-note{font-size:11px;color:var(--muted);margin-top:10px}
 .pkgs{padding:0 48px 80px}
-.pkg-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:1px}
-.pkg{background:var(--dark);padding:44px 36px;transition:background .2s}
+.pkg-g{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:1px}
+.pkg{background:var(--dark);padding:36px 26px;transition:background .2s}
 .pkg:hover{background:var(--card)}
 .pkg.feat{background:var(--red)}
 .pkg.feat:hover{background:#d03b52}
 .pkg-tag{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--dim);margin-bottom:20px}
 .pkg.feat .pkg-tag{color:rgba(255,255,255,.6)}
-.pkg-name{font-family:var(--fd);font-size:32px;font-weight:900;text-transform:uppercase;margin-bottom:4px}
-.pkg-price{font-family:var(--fd);font-size:48px;font-weight:900;line-height:1;margin-bottom:4px}
+.pkg-name{font-family:var(--fd);font-size:26px;font-weight:900;text-transform:uppercase;margin-bottom:4px}
+.pkg-price{font-family:var(--fd);font-size:38px;font-weight:900;line-height:1;margin-bottom:4px}
 .pkg-mo{font-size:13px;color:var(--dim);margin-bottom:36px}
 .pkg.feat .pkg-mo{color:rgba(255,255,255,.65)}
 .pkg-list{list-style:none;display:flex;flex-direction:column;gap:10px}
@@ -367,6 +381,92 @@ h1 em{font-style:italic;color:var(--red)}
 .sp-logos{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;opacity:.75}
 .sp-logos span{font-family:var(--fd);font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:1px;color:var(--off)}
 
+/* QUALIFICATION FUNNEL (ads.html) */
+.trust-bar{display:flex;justify-content:center;gap:56px;flex-wrap:wrap;padding:36px 24px 0}
+.trust-item{text-align:center}
+.trust-n{font-family:var(--fd);font-size:30px;font-weight:900;line-height:1}
+.trust-n span{color:var(--red)}
+.trust-l{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-top:4px}
+.trust-note{text-align:center;font-size:10px;color:var(--muted);margin-top:18px;letter-spacing:.5px}
+
+.chain{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0;margin:36px auto 0;max-width:880px}
+.chain-node{font-family:var(--fd);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--off);border:1px solid var(--border);padding:10px 16px;background:var(--card)}
+.chain-arrow{color:var(--red);font-size:14px;padding:0 8px}
+
+.cs2{padding:90px 24px;border-top:1px solid var(--border);max-width:980px;margin:0 auto}
+.cs2-hd{text-align:center;margin-bottom:12px}
+.cs2-hd p{font-size:12px;color:var(--muted);margin-top:10px;letter-spacing:.5px}
+.cs2-block{padding:24px 0;border-top:1px solid var(--border)}
+.cs2-block:last-of-type{border-bottom:1px solid var(--border);margin-bottom:40px}
+.cs2-tag{font-family:var(--fd);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.cs2-block p{font-size:14px;color:var(--off);line-height:1.75}
+.cs2-result{text-align:center;padding:40px 24px;border:1px solid var(--border);background:var(--card);margin-bottom:40px}
+.cs2-result-n{font-family:var(--fd);font-size:56px;font-weight:900;color:var(--red);line-height:1}
+.cs2-result-l{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-top:8px}
+.cs2-result-sub{font-size:11px;color:var(--muted);margin-top:14px}
+.cs2-shots{display:flex;flex-direction:column;gap:32px}
+.cs2-shot img{width:100%;display:block;border:1px solid var(--border)}
+.cs2-shot-cap{font-size:12px;color:var(--dim);margin-top:10px;line-height:1.6}
+.cs2-shot-cap strong{color:var(--off)}
+.cs2-dash{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:32px}
+.cs2-dash-c{background:var(--dark);padding:22px 18px;text-align:center}
+.cs2-dash-n{font-family:var(--fd);font-size:20px;font-weight:900}
+.cs2-dash-l{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim);margin-top:6px}
+
+.method-g{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);max-width:1000px;margin:0 auto}
+.method-c{background:var(--dark);padding:28px 20px;text-align:center}
+.method-n{font-family:var(--fd);font-size:28px;font-weight:900;color:var(--red);margin-bottom:10px}
+.method-c h4{font-family:var(--fd);font-size:15px;font-weight:800;text-transform:uppercase;margin-bottom:8px}
+.method-c p{font-size:11px;color:var(--dim);line-height:1.6}
+
+.fit-g{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);max-width:900px;margin:0 auto}
+.fit-c{background:var(--dark);padding:32px 28px}
+.fit-c.yes{border-top:2px solid var(--red)}
+.fit-c h4{font-family:var(--fd);font-size:16px;font-weight:800;text-transform:uppercase;margin-bottom:16px;letter-spacing:1px}
+.fit-c ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fit-c ul li{font-size:13px;color:var(--off);display:flex;gap:10px;line-height:1.5}
+.fit-c.yes ul li::before{content:'✓';color:var(--red);flex-shrink:0}
+.fit-c.no ul li::before{content:'—';color:var(--muted);flex-shrink:0}
+
+.qual-result{text-align:center;padding:20px 0}
+.qual-result .ti{font-size:40px;margin-bottom:16px}
+.qual-result h3{font-family:var(--fd);font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:14px}
+.qual-result p{font-size:14px;color:var(--dim);line-height:1.75;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto}
+.cal-embed{width:100%;height:680px;border:1px solid var(--border);margin-top:24px;background:var(--card)}
+.prep-list{list-style:none;display:flex;flex-direction:column;gap:8px;text-align:left;max-width:380px;margin:20px auto 0}
+.prep-list li{font-size:13px;color:var(--off);display:flex;gap:10px}
+.prep-list li::before{content:'—';color:var(--red)}
+
+/* AUDIT APPLICATION FUNNEL */
+.aud-steps{padding:80px 24px;border-top:1px solid var(--border);max-width:900px;margin:0 auto}
+.aud-steps-hd{text-align:center;margin-bottom:48px}
+.aud-step-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.aud-step-c{background:var(--dark);padding:32px 26px;text-align:center}
+.aud-step-n{font-family:var(--fd);font-size:34px;font-weight:900;color:var(--red);margin-bottom:12px}
+.aud-step-c h4{font-family:var(--fd);font-size:17px;font-weight:800;text-transform:uppercase;margin-bottom:8px}
+.aud-step-c p{font-size:12px;color:var(--dim);line-height:1.65}
+.aud-form-sec{padding:80px 24px;border-top:1px solid var(--border);background:var(--dark)}
+.aud-form-wrap{max-width:640px;margin:0 auto;background:var(--card);border:1px solid var(--border);padding:44px}
+.aud-note{background:var(--black);border:1px solid var(--border);padding:16px 18px;font-size:12px;color:var(--dim);line-height:1.6;margin-bottom:28px}
+.aud-note strong{color:var(--off)}
+.aud-f{margin-bottom:1px;background:var(--border)}
+.aud-f-inner{background:var(--card)}
+.aud-f label{display:block;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);padding:14px 4px 6px}
+.aud-f input,.aud-f select,.aud-f textarea{width:100%;background:transparent;border:none;outline:none;color:var(--white);font-family:var(--fb);font-size:14px;font-weight:300;padding:0 4px 14px;cursor:text;border-bottom:1px solid var(--border)}
+.aud-f select{cursor:pointer}
+.aud-f select option{background:var(--dark);color:var(--white)}
+.aud-f textarea{resize:none;height:80px}
+.aud-check{display:flex;gap:10px;align-items:flex-start;padding:16px 4px;font-size:12px;color:var(--dim);line-height:1.6}
+.aud-check input{width:auto;margin-top:2px}
+.aud-submit-btn{width:100%;font-family:var(--fd);font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--black);background:var(--white);padding:16px;border:none;cursor:pointer;transition:background .2s,color .2s;margin-top:16px}
+.aud-submit-btn:hover{background:var(--red);color:var(--white)}
+.aud-submit-btn:disabled{opacity:.6;cursor:default}
+.aud-small{font-size:11px;color:var(--muted);text-align:center;margin-top:16px}
+.aud-thanks{text-align:center;padding:20px 0}
+.aud-thanks .ti{font-size:40px;margin-bottom:16px}
+.aud-thanks h3{font-family:var(--fd);font-size:26px;font-weight:900;text-transform:uppercase;margin-bottom:12px}
+.aud-thanks p{font-size:14px;color:var(--dim);margin-bottom:24px;line-height:1.7}
+
 /* VSL FUNNEL PAGE */
 .vsl-body{padding-top:0}
 .vsl-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:0 24px;height:60px;border-bottom:1px solid var(--border);background:rgba(9,9,14,.93);backdrop-filter:blur(20px)}
@@ -511,8 +611,8 @@ h1 em{font-style:italic;color:var(--red)}
   h1{font-size:52px}
   .what-g,.ct-wrap{grid-template-columns:1fr}
   .ind-g,.niche-g,.cr-who-g,.pain-g{grid-template-columns:1fr 1fr}
-  .pkg-g{grid-template-columns:1fr}
-  .team-g{grid-template-columns:1fr}
+  .pkg-g,.team-g{grid-template-columns:1fr}
+  .cl-g{grid-template-columns:1fr}
   .stats-bar{grid-template-columns:1fr 1fr}
   .case{grid-template-columns:1fr 1fr}
   .lr-strip{grid-template-columns:1fr}
@@ -535,6 +635,13 @@ h1 em{font-style:italic;color:var(--red)}
   .vsl-proof-quotes{grid-template-columns:1fr}
   .vsl-proof-stats{gap:28px}
   .vsl-risk-box{padding:28px 22px}
+  .aud-step-g{grid-template-columns:1fr}
+  .aud-form-wrap{padding:28px 20px}
+  .chain-node{font-size:10px;padding:8px 12px}
+  .cs2-dash{grid-template-columns:1fr 1fr}
+  .method-g{grid-template-columns:1fr 1fr}
+  .fit-g{grid-template-columns:1fr}
+  .cal-embed{height:560px}
 }
 
 </style>
@@ -550,183 +657,390 @@ h1 em{font-style:italic;color:var(--red)}
 
 <main style="padding-top:0">
 
-<!-- ABOVE THE FOLD -->
+<!-- HERO -->
 <section class="vsl-hero">
-  <div class="vsl-eye fade-up">For Brands Spending On Ads (Or About To)</div>
-  <h1 class="fade-up d1">Why Your Ads Aren't Bringing<br/>The Customers They Should</h1>
-  <p class="vsl-hero-sub fade-up d2">Here's the quick breakdown below — then book a free 30-minute call where we'll look at your actual numbers.</p>
-  <div class="vsl-trust fade-up d2">No Pitch &middot; No Card Required &middot; 30 Minutes</div>
+  <div class="vsl-eye fade-up">Performance Marketing</div>
+  <h1 class="fade-up d1">Turn Your Ad Spend Into A<br/><em>Predictable Acquisition System.</em></h1>
+  <p class="vsl-hero-sub fade-up d2">Leadhaus helps ambitious businesses build, launch and manage paid advertising campaigns designed to generate measurable leads and sales — not just clicks, impressions and likes.</p>
+  <a href="#qual-quiz" class="btn-p fade-up d3">See If We're A Fit</a>
+  <div class="vsl-cta-note fade-up d3">Apply for a free strategy call.</div>
 </section>
 
-<div class="vsl-cta-below fade-up d3">
-  <a href="#vsl-quiz" class="btn-p">Book My Free Strategy Call</a>
-  <div class="vsl-cta-note">Takes 45 seconds to apply. We follow up within 24 hours.</div>
+<div class="trust-bar fade-up d3">
+  <div class="trust-item"><div class="trust-n"><span>₦</span>10.9m+</div><div class="trust-l">Ad Spend Managed</div></div>
+  <div class="trust-item"><div class="trust-n">782<span>k+</span></div><div class="trust-l">Impressions Delivered</div></div>
+  <div class="trust-item"><div class="trust-n"><span>$</span>80.7k</div><div class="trust-l">Revenue, One Case Study</div></div>
 </div>
+<div class="trust-note fade-up d3">Figures pulled directly from live ad accounts and client dashboards — see the actual screenshots below.</div>
 
-<!-- WRITTEN VSL SCRIPT -->
+<!-- PROBLEM -->
 <section class="vsl-script">
   <div class="vsl-script-hd fade-up">
-    <div class="sec-label" style="justify-content:center">The Breakdown</div>
-    <h2>In Case You'd Rather Read It</h2>
-    <p>Same argument as the video, in writing.</p>
+    <div class="sec-label" style="justify-content:center">The Problem</div>
+    <h2>Your Ads Don't Have A Traffic Problem.<br/>They Have A System Problem.</h2>
+    <p>Every one of these is a symptom, not the disease.</p>
   </div>
 
   <div class="vsl-block fade-up">
-    <div class="vsl-block-tag">The Problem</div>
-    <h3>Most "Ad Campaigns" Are Just Boosted Posts</h3>
-    <p>You've spent real money on Meta or Instagram. Maybe you've even gotten a few sales out of it. But if you're honest — you don't actually know why some months work and others don't. There's no system. Just a budget and a hope.</p>
+    <div class="vsl-block-tag">What This Usually Looks Like</div>
+    <ul>
+      <li>Spending money on ads without knowing what's actually working</li>
+      <li>Getting clicks but not enough customers</li>
+      <li>High cost per lead or cost per customer</li>
+      <li>Creative that doesn't hold attention</li>
+      <li>An offer that doesn't give people a reason to act now</li>
+      <li>Targeting that's too broad or built on guesses</li>
+      <li>No real tracking, so nobody knows which campaign paid for itself</li>
+      <li>Landing pages that don't match what the ad promised</li>
+      <li>Campaigns that get changed every time performance dips, instead of diagnosed</li>
+    </ul>
   </div>
 
   <div class="vsl-block fade-up d1">
-    <div class="vsl-block-tag">Why It's Costing You</div>
-    <h3>Every Month You Guess Is A Month A Competitor Doesn't</h3>
-    <p>While you're re-boosting the same post and watching the number go up or down for no clear reason, someone in your category is running a tracked, tested, optimised campaign — and taking the customers who were about to find you instead.</p>
+    <div class="vsl-block-tag">Why It Happens</div>
+    <h3>Performance Depends On The Whole Chain, Not One Link</h3>
+    <p>Fix the ad and ignore the landing page, and you've fixed nothing. Fix targeting and ignore the offer, and you've fixed nothing. Every link in this chain has to hold:</p>
   </div>
-
-  <div class="vsl-block fade-up d2">
-    <div class="vsl-block-tag">What We Do Differently</div>
-    <h3>One Offer. One Audience. Checked Daily.</h3>
-    <p>No spreading budget across five different messages hoping one sticks. We pick one offer, build the campaign around one clear audience, and check cost per lead every single day — not once a month when the invoice is due.</p>
-    <ul>
-      <li>Campaign strategy built around your specific offer, not a template</li>
-      <li>Daily monitoring on cost per lead — the only number that actually matters</li>
-      <li>Email flows layered in so a click isn't wasted after the ad does its job</li>
-    </ul>
+  <div class="chain fade-up d2">
+    <div class="chain-node">Offer</div><div class="chain-arrow">→</div>
+    <div class="chain-node">Creative</div><div class="chain-arrow">→</div>
+    <div class="chain-node">Targeting</div><div class="chain-arrow">→</div>
+    <div class="chain-node">Structure</div><div class="chain-arrow">→</div>
+    <div class="chain-node">Landing Page</div><div class="chain-arrow">→</div>
+    <div class="chain-node">Follow-Up</div><div class="chain-arrow">→</div>
+    <div class="chain-node">Conversion</div>
   </div>
-
-  <div class="vsl-block fade-up d3">
-    <div class="vsl-block-tag">Proof</div>
-    <h3>This Isn't Theory — Here's What It's Already Done</h3>
-    <p>47 DM enquiries in the first week for a fashion brand's launch. ₦820 cost per lead for a food brand, off a single creator collab. A 4x average return on ad spend across active campaigns. These are real numbers from real client accounts, not projections.</p>
-  </div>
-
-  <div class="vsl-block fade-up d4">
-    <div class="vsl-block-tag">The Offer</div>
-    <h3>A Free 30-Minute Strategy Call</h3>
-    <p>We'll look at what you're currently doing — or what you're planning to do — and tell you straight what's working, what's leaking money, and what we'd do differently. No generic pitch deck. If it's not a fit, we'll tell you that too.</p>
+  <div class="vsl-block fade-up d3" style="border-top:none;padding-top:32px">
+    <p>That's why we don't think of Leadhaus as an ad buyer. We're a strategic growth partner — the ad is one link in a chain we're responsible for end to end.</p>
   </div>
 </section>
 
-<!-- PROOF STACK -->
+<!-- PROOF / CASE STUDY -->
+<section class="cs2">
+  <div class="cs2-hd fade-up">
+    <div class="sec-label" style="justify-content:center">Real Proof</div>
+    <h2>What Actually Happened, Not What We Claim</h2>
+    <p>No stock dashboards, no invented numbers — every figure below is a real screenshot from a real account.</p>
+  </div>
+
+  <div class="fade-up d1" style="margin-top:40px">
+    <h3 style="font-family:var(--fd);font-size:24px;font-weight:900;text-transform:uppercase;margin-bottom:24px">How We Helped Moelle Zavian Generate $80.7K In Revenue</h3>
+
+    <div class="cs2-block">
+      <div class="cs2-tag">The Challenge</div>
+      <p>Moelle Zavian was relying almost entirely on Instagram DMs to make sales — no paid advertising running, and no email marketing system in place to capture or follow up with anyone who didn't convert on the spot.</p>
+    </div>
+    <div class="cs2-block">
+      <div class="cs2-tag">The Strategy</div>
+      <p>Build the two acquisition and retention layers that were missing: a paid ad creative and campaign system to bring in cold traffic beyond DMs, and a full email marketing system to capture and recover revenue that DMs alone were leaving behind.</p>
+    </div>
+    <div class="cs2-block">
+      <div class="cs2-tag">The Execution</div>
+      <p>We built and launched ad creatives and paid campaigns, and built out Moelle Zavian's email marketing system in Klaviyo — welcome, abandoned cart, and retention flows running alongside the ad account.</p>
+    </div>
+
+    <div class="cs2-result">
+      <div class="cs2-result-n">$80.7k</div>
+      <div class="cs2-result-l">Total Revenue &middot; 4-Month Period</div>
+      <div class="cs2-result-sub">Apr 1 – Jul 31, 2026 &middot; +14.9% vs. prior period</div>
+    </div>
+
+    <div class="cs2-shots">
+      <div class="cs2-shot">
+        <img src="images/proof-shopify-revenue.jpeg" alt="Shopify dashboard showing $80,738.38 in total sales over Apr 1 to Jul 31 2026"/>
+        <div class="cs2-shot-cap"><strong>Store dashboard, screenshotted directly.</strong> $80,738.38 total sales, 231 orders, 75.1K sessions (+14.9%) over the period shown. This reflects total store revenue for the period — not a claim that 100% of it came from paid ads alone unless that attribution is confirmed.</div>
+      </div>
+    </div>
+
+    <div class="cs2-dash fade-up d2">
+      <div class="cs2-dash-c"><div class="cs2-dash-n">$80.7k</div><div class="cs2-dash-l">Total Sales</div></div>
+      <div class="cs2-dash-c"><div class="cs2-dash-n">231</div><div class="cs2-dash-l">Orders</div></div>
+      <div class="cs2-dash-c"><div class="cs2-dash-n">75.1k</div><div class="cs2-dash-l">Sessions</div></div>
+      <div class="cs2-dash-c"><div class="cs2-dash-n">+14.9%</div><div class="cs2-dash-l">vs. Prior Period</div></div>
+    </div>
+  </div>
+
+  <div class="fade-up d2" style="margin-top:72px">
+    <h3 style="font-family:var(--fd);font-size:24px;font-weight:900;text-transform:uppercase;margin-bottom:24px">Email Marketing — $3.5K+ Recovered In Two Months</h3>
+    <p style="font-size:14px;color:var(--dim);line-height:1.75;margin-bottom:28px">Before this, Moelle Zavian had no email marketing system at all. Once the flows were built and live in Klaviyo, here's what they attributed directly to email over the two months that followed.</p>
+
+    <div class="cs2-shots">
+      <div class="cs2-shot">
+        <img src="images/proof-klaviyo-moelle.png" alt="Klaviyo dashboard showing Moelle Zavian $3,577.60 attributed revenue from email flows"/>
+        <div class="cs2-shot-cap"><strong>Klaviyo dashboard, screenshotted directly.</strong> $3,577.60 attributed revenue (14.09% of total store revenue for the period), 100% of it from flows — up 57% vs. the previous period. Zero of this came from campaigns, meaning it's entirely automated flow revenue the business wasn't capturing before.</div>
+      </div>
+    </div>
+
+    <div class="cs2-dash fade-up d3">
+      <div class="cs2-dash-c"><div class="cs2-dash-n">$3,577.60</div><div class="cs2-dash-l">Email Attributed Revenue</div></div>
+      <div class="cs2-dash-c"><div class="cs2-dash-n">100%</div><div class="cs2-dash-l">From Flows</div></div>
+      <div class="cs2-dash-c"><div class="cs2-dash-n">+57%</div><div class="cs2-dash-l">vs. Prior Period</div></div>
+      <div class="cs2-dash-c"><div class="cs2-dash-n">$8.30</div><div class="cs2-dash-l">Per Recipient</div></div>
+    </div>
+  </div>
+
+  <div class="fade-up d3" style="margin-top:72px">
+    <h3 style="font-family:var(--fd);font-size:24px;font-weight:900;text-transform:uppercase;margin-bottom:24px">Ad Account Performance — Moelle</h3>
+    <p style="font-size:14px;color:var(--dim);line-height:1.75;margin-bottom:28px">Live campaign data, screenshotted directly from Meta Ads Manager.</p>
+
+    <div class="cs2-shots">
+      <div class="cs2-shot">
+        <img src="images/proof-usa-tier1-adset.jpeg" alt="Meta Ads Manager showing USA Tier 1 ad set with 409 checkout-initiate results"/>
+        <div class="cs2-shot-cap"><strong>USA Tier 1 ad set.</strong> 409 website checkout-initiates at ₦7,304.65 cost per result, ₦2,987,601.52 spent, 169,755 impressions.</div>
+      </div>
+      <div class="cs2-shot">
+        <img src="images/proof-moelle-campaigns.jpeg" alt="Meta Ads Manager showing Moelle Dm May and April Usa campaigns"/>
+        <div class="cs2-shot-cap"><strong>Moelle Dm May &amp; April Usa campaigns.</strong> 1,431 messaging conversations, ₦4,468,001.53 + ₦3,523,643.29 spent, 417,734 + 195,104 impressions combined.</div>
+      </div>
+    </div>
+
+    <div class="cs2-dash fade-up d3">
+      <div class="cs2-dash-c"><div class="cs2-dash-n">₦10.98m</div><div class="cs2-dash-l">Total Spend Shown</div></div>
+      <div class="cs2-dash-c"><div class="cs2-dash-n">782k</div><div class="cs2-dash-l">Impressions</div></div>
+      <div class="cs2-dash-c"><div class="cs2-dash-n">1,840</div><div class="cs2-dash-l">Results (Checkouts + Conversations)</div></div>
+      <div class="cs2-dash-c"><div class="cs2-dash-n">₦7,304.65</div><div class="cs2-dash-l">Cost / Checkout Initiate</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
 <section class="vsl-proof">
   <div class="vsl-proof-hd fade-up">
-    <div class="sec-label" style="justify-content:center">Real Numbers</div>
-    <h2>Not Projections. Results.</h2>
+    <div class="sec-label" style="justify-content:center">The Leadhaus Method</div>
+    <h2>Five Steps. No Guesswork.</h2>
   </div>
-  <div class="vsl-proof-stats fade-up d1">
-    <div class="fn-num"><div class="fn-num-n">47<span>+</span></div><div class="fn-num-l">Leads in Week One</div></div>
-    <div class="fn-num"><div class="fn-num-n"><span>₦</span>820</div><div class="fn-num-l">Cost Per Lead</div></div>
-    <div class="fn-num"><div class="fn-num-n">4<span>x</span></div><div class="fn-num-l">Avg Return on Ad Spend</div></div>
-  </div>
-  <div class="vsl-proof-quotes fade-up d2">
-    <div class="vsl-proof-quote"><p>"We launched and had 47 enquiries in the first week."</p><span>Fashion Brand &middot; ₦3.2k Cost Per Lead</span></div>
-    <div class="vsl-proof-quote"><p>"We had to hire more delivery riders after this campaign."</p><span>Food Brand &middot; ₦820 Cost Per Lead</span></div>
-    <div class="vsl-proof-quote"><p>"Our appointment book was full two weeks after launch."</p><span>Beauty Brand &middot; 8.3% Engagement</span></div>
-  </div>
-  <div class="vsl-logos-label fade-up d3">Worked With</div>
-  <div class="vsl-logos fade-up d3">
-    <span>Frankavé</span>
-    <span>Glass HQ</span>
+  <div class="method-g fade-up d1">
+    <div class="method-c"><div class="method-n">01</div><h4>Diagnose</h4><p>We find out what's actually broken before we touch anything.</p></div>
+    <div class="method-c"><div class="method-n">02</div><h4>Build</h4><p>Offer, creative, and tracking get built or fixed first.</p></div>
+    <div class="method-c"><div class="method-n">03</div><h4>Launch</h4><p>Campaigns go live with a clear hypothesis, not a guess.</p></div>
+    <div class="method-c"><div class="method-n">04</div><h4>Optimise</h4><p>Daily monitoring against the number that actually matters.</p></div>
+    <div class="method-c"><div class="method-n">05</div><h4>Scale</h4><p>Budget follows what's proven — not the other way around.</p></div>
   </div>
 </section>
 
-<!-- RISK REVERSAL -->
-<section class="vsl-risk">
-  <div class="fade-up">
-    <div class="sec-label" style="justify-content:center">No Risk In Asking</div>
-    <h2>What You're Actually Signing Up For</h2>
+<!-- WHO WE WORK WITH -->
+<section class="vsl-script">
+  <div class="vsl-script-hd fade-up">
+    <div class="sec-label" style="justify-content:center">Fit Check</div>
+    <h2>Who This Is Actually For</h2>
+    <p>Being direct about this saves everyone time.</p>
   </div>
-  <div class="vsl-risk-box fade-up d1">
-    <h3>Here's What Happens On The Call</h3>
-    <ul>
-      <li>We ask about your business, your customer, and what you've tried already</li>
-      <li>We tell you honestly if paid ads make sense for you right now</li>
-      <li>You leave with next steps whether or not we end up working together</li>
-      <li>No contracts signed on the call, no pressure, no hard close</li>
-    </ul>
+  <div class="fit-g fade-up d1">
+    <div class="fit-c yes">
+      <h4>Good Fit</h4>
+      <ul>
+        <li>Have a real product or service</li>
+        <li>Have a sellable offer</li>
+        <li>Have existing or realistic customer economics</li>
+        <li>Are willing to invest in acquisition</li>
+        <li>Want measurable growth, not vanity metrics</li>
+        <li>Are willing to test and optimise</li>
+        <li>Want a strategic partner, not just an ad buyer</li>
+      </ul>
+    </div>
+    <div class="fit-c no">
+      <h4>Not Yet A Fit</h4>
+      <ul>
+        <li>No validated offer</li>
+        <li>No budget for ads or fees</li>
+        <li>Expecting guaranteed results</li>
+        <li>Just want someone to "boost posts"</li>
+        <li>Unwilling to improve the offer or funnel</li>
+        <li>Want instant results without any testing</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ / OBJECTIONS -->
 <section class="vsl-faq">
   <div class="vsl-faq-hd fade-up">
-    <div class="sec-label" style="justify-content:center">Common Questions</div>
-    <h2>Before You Book</h2>
+    <div class="sec-label" style="justify-content:center">Before You Apply</div>
+    <h2>Honest Answers</h2>
   </div>
   <div class="fade-up d1">
     <div class="vsl-faq-item">
-      <button type="button" class="vsl-faq-q" onclick="vslFaq(this)">Do I need a big ad budget to start?<span class="plus">+</span></button>
-      <div class="vsl-faq-a"><p>No. We've run profitable campaigns from as little as ₦50k. What matters more than budget size is whether the offer and targeting are right — that's exactly what we'll figure out on the call.</p></div>
+      <button type="button" class="vsl-faq-q" onclick="vslFaq(this)">Will you guarantee results?<span class="plus">+</span></button>
+      <div class="vsl-faq-a"><p>No — and anyone who does is telling you what you want to hear, not the truth. What we can guarantee is a real diagnostic process, transparent reporting, and daily attention to the number that actually matters. Results depend on the offer, the market, and the economics, not just the ad account.</p></div>
     </div>
     <div class="vsl-faq-item">
-      <button type="button" class="vsl-faq-q" onclick="vslFaq(this)">How fast will I see results?<span class="plus">+</span></button>
-      <div class="vsl-faq-a"><p>Most clients see their first leads within the first week of a campaign going live. Full optimisation — getting cost per lead to where it should be — usually takes 2-4 weeks of daily adjustment.</p></div>
+      <button type="button" class="vsl-faq-q" onclick="vslFaq(this)">How much should I spend on ads?<span class="plus">+</span></button>
+      <div class="vsl-faq-a"><p>Depends entirely on your margins and average order value. We'd rather work backwards from what a customer is worth to you than give you a number that means nothing without that context — that's exactly what the strategy call is for.</p></div>
     </div>
     <div class="vsl-faq-item">
-      <button type="button" class="vsl-faq-q" onclick="vslFaq(this)">What if I've tried ads before and it didn't work?<span class="plus">+</span></button>
-      <div class="vsl-faq-a"><p>That's most of who we talk to. Usually the ads weren't the problem — the offer, the targeting, or the landing page was. We'll tell you which on the call.</p></div>
+      <button type="button" class="vsl-faq-q" onclick="vslFaq(this)">I've tried ads before and they didn't work.<span class="plus">+</span></button>
+      <div class="vsl-faq-a"><p>Common, and usually the ad platform wasn't actually the problem — the offer, the targeting, or the landing page was. Part of the diagnose step is figuring out which link in the chain actually broke last time.</p></div>
     </div>
     <div class="vsl-faq-item">
-      <button type="button" class="vsl-faq-q" onclick="vslFaq(this)">Is this call actually free?<span class="plus">+</span></button>
-      <div class="vsl-faq-a"><p>Yes. No card required, no strings. If we're not a fit, we'll say so directly instead of wasting your time.</p></div>
+      <button type="button" class="vsl-faq-q" onclick="vslFaq(this)">Do I need to have run ads before?<span class="plus">+</span></button>
+      <div class="vsl-faq-a"><p>No. If you haven't started yet, we build the account and campaign structure properly from day one — arguably easier than untangling a messy existing account.</p></div>
+    </div>
+    <div class="vsl-faq-item">
+      <button type="button" class="vsl-faq-q" onclick="vslFaq(this)">How quickly will I see results?<span class="plus">+</span></button>
+      <div class="vsl-faq-a"><p>Most clients see first data within the first week of launch. Real optimisation — getting cost per result to where it should be — usually takes 2–4 weeks of daily adjustment. Anyone promising faster is skipping the testing that makes results durable.</p></div>
+    </div>
+    <div class="vsl-faq-item">
+      <button type="button" class="vsl-faq-q" onclick="vslFaq(this)">Why shouldn't I just hire a freelancer?<span class="plus">+</span></button>
+      <div class="vsl-faq-a"><p>You can, and for some businesses that's the right call. The difference is a freelancer usually manages the ad account; we look at the whole chain — offer, creative, landing page, follow-up — because a well-run ad account pointed at a broken funnel still fails.</p></div>
     </div>
   </div>
 </section>
 
-<!-- QUALIFYING QUIZ -->
-<section class="fn-sec" id="vsl-quiz">
+<!-- QUALIFICATION QUIZ -->
+<section class="fn-sec" id="qual-quiz">
   <div class="fn-sec-hd fade-up">
-    <div class="sec-label" style="justify-content:center">Last Step</div>
-    <h2>Let's Book Your Call</h2>
-    <p>Two quick questions, then your details. Takes under a minute.</p>
+    <div class="sec-label" style="justify-content:center">See If We're A Fit</div>
+    <h2>Apply For Your Free Strategy Call</h2>
+    <p>A few quick questions so we come to the call already knowing your business — not starting cold.</p>
   </div>
 
   <div class="qz-wrap fade-up d1">
     <div class="qz-progress"><div class="qz-progress-bar" id="qz-bar"></div></div>
 
     <div class="qz-step active" id="step-0">
-      <div class="qz-q">What's the biggest problem with your marketing right now?</div>
+      <div class="qz-q">What best describes your business?</div>
       <div class="qz-opts">
-        <button type="button" class="qz-opt" onclick="qzSelect('main_problem','Getting views but no sales',this)">Getting views but no sales</button>
-        <button type="button" class="qz-opt" onclick="qzSelect('main_problem','Don\'t know if ads are working',this)">Don't know if ads are working</button>
-        <button type="button" class="qz-opt" onclick="qzSelect('main_problem','No ads running at all',this)">No ads running at all</button>
-        <button type="button" class="qz-opt" onclick="qzSelect('main_problem','Spending but not tracking results',this)">Spending but not tracking results</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('business_type','E-commerce / Product Brand',this)">E-commerce / Product Brand</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('business_type','Service Business',this)">Service Business</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('business_type','Beauty / Skincare',this)">Beauty / Skincare</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('business_type','Fashion',this)">Fashion</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('business_type','Restaurant / Food',this)">Restaurant / Food</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('business_type','Other',this)">Other</button>
       </div>
-      <div class="qz-nav"><span></span><span class="qz-count">Step 1 of 3</span></div>
+      <div class="qz-nav"><span></span><span class="qz-count">Step 1 of 8</span></div>
     </div>
 
     <div class="qz-step" id="step-1">
-      <div class="qz-q">What's your monthly ad budget right now?</div>
+      <div class="qz-q">What is your approximate monthly revenue?</div>
       <div class="qz-opts">
-        <button type="button" class="qz-opt" onclick="qzSelect('ad_budget','Under ₦50k',this)">Under ₦50k</button>
-        <button type="button" class="qz-opt" onclick="qzSelect('ad_budget','₦50k – ₦150k',this)">₦50k – ₦150k</button>
-        <button type="button" class="qz-opt" onclick="qzSelect('ad_budget','₦150k – ₦300k',this)">₦150k – ₦300k</button>
-        <button type="button" class="qz-opt" onclick="qzSelect('ad_budget','₦300k+',this)">₦300k+</button>
-        <button type="button" class="qz-opt" onclick="qzSelect('ad_budget','Not running ads yet',this)">Not running ads yet</button>
+        <button type="button" class="qz-opt" onclick="qzScore('revenue','Pre-revenue',0,this)">Pre-revenue</button>
+        <button type="button" class="qz-opt" onclick="qzScore('revenue','Under ₦500k',1,this)">Under ₦500k</button>
+        <button type="button" class="qz-opt" onclick="qzScore('revenue','₦500k – ₦1m',2,this)">₦500k – ₦1m</button>
+        <button type="button" class="qz-opt" onclick="qzScore('revenue','₦1m – ₦3m',3,this)">₦1m – ₦3m</button>
+        <button type="button" class="qz-opt" onclick="qzScore('revenue','₦3m – ₦10m',4,this)">₦3m – ₦10m</button>
+        <button type="button" class="qz-opt" onclick="qzScore('revenue','₦10m+',5,this)">₦10m+</button>
       </div>
-      <div class="qz-nav"><button type="button" class="qz-back" onclick="qzBack()">&larr; Back</button><span class="qz-count">Step 2 of 3</span></div>
+      <div class="qz-nav"><button type="button" class="qz-back" onclick="qzBack()">&larr; Back</button><span class="qz-count">Step 2 of 8</span></div>
     </div>
 
     <div class="qz-step" id="step-2">
-      <div class="qz-q">Where should we send your strategy?</div>
-      <form id="qz-form">
-        <input type="hidden" name="_subject" value="New VSL Lead — Performance Marketing Funnel" />
-        <input type="hidden" name="main_problem" id="hid_main_problem" />
-        <input type="hidden" name="ad_budget" id="hid_ad_budget" />
-        <div class="qz-f"><div class="qz-f-inner"><label>Full Name *</label><input type="text" name="full_name" required /></div></div>
-        <div class="qz-f"><div class="qz-f-inner"><label>Business / Brand Name *</label><input type="text" name="brand_name" required /></div></div>
-        <div class="qz-f"><div class="qz-f-inner"><label>WhatsApp Number *</label><input type="tel" name="whatsapp" placeholder="+234 XXX XXX XXXX" required /></div></div>
-        <button type="submit" class="qz-submit-btn" id="qz-submit-btn">Get My Free Strategy</button>
-      </form>
-      <div class="qz-nav"><button type="button" class="qz-back" onclick="qzBack()">&larr; Back</button><span class="qz-count">Step 3 of 3</span></div>
+      <div class="qz-q">What are you currently spending on paid advertising each month?</div>
+      <div class="qz-opts">
+        <button type="button" class="qz-opt" onclick="qzScore('ad_spend','Not currently running ads',0,this)">I'm not currently running ads</button>
+        <button type="button" class="qz-opt" onclick="qzScore('ad_spend','Under ₦50k',1,this)">Under ₦50k</button>
+        <button type="button" class="qz-opt" onclick="qzScore('ad_spend','₦50k – ₦150k',2,this)">₦50k – ₦150k</button>
+        <button type="button" class="qz-opt" onclick="qzScore('ad_spend','₦150k – ₦300k',3,this)">₦150k – ₦300k</button>
+        <button type="button" class="qz-opt" onclick="qzScore('ad_spend','₦300k – ₦1m',4,this)">₦300k – ₦1m</button>
+        <button type="button" class="qz-opt" onclick="qzScore('ad_spend','₦1m+',5,this)">₦1m+</button>
+      </div>
+      <div class="qz-nav"><button type="button" class="qz-back" onclick="qzBack()">&larr; Back</button><span class="qz-count">Step 3 of 8</span></div>
     </div>
 
     <div class="qz-step" id="step-3">
-      <div class="qz-thanks">
+      <div class="qz-q">What's your biggest challenge with paid advertising?</div>
+      <div class="qz-opts">
+        <button type="button" class="qz-opt" onclick="qzSelect('challenge','Getting clicks but not enough sales',this)">Getting clicks but not enough sales</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('challenge','Cost per lead/customer is too high',this)">My cost per lead/customer is too high</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('challenge','Campaigns aren\'t spending effectively',this)">My campaigns aren't spending effectively</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('challenge','Don\'t know what\'s working',this)">I don't know what's working</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('challenge','Want to scale but performance drops',this)">I want to scale but performance drops</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('challenge','Haven\'t started advertising yet',this)">I haven't started advertising yet</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('challenge','Other',this)">Other</button>
+      </div>
+      <div class="qz-nav"><button type="button" class="qz-back" onclick="qzBack()">&larr; Back</button><span class="qz-count">Step 4 of 8</span></div>
+    </div>
+
+    <div class="qz-step" id="step-4">
+      <div class="qz-q">What would you most like to achieve?</div>
+      <div class="qz-opts">
+        <button type="button" class="qz-opt" onclick="qzSelect('goal','Generate more leads',this)">Generate more leads</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('goal','Generate more sales',this)">Generate more sales</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('goal','Reduce acquisition costs',this)">Reduce acquisition costs</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('goal','Scale existing campaigns',this)">Scale existing campaigns</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('goal','Launch paid advertising properly',this)">Launch paid advertising properly</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('goal','Build a predictable acquisition system',this)">Build a predictable acquisition system</button>
+        <button type="button" class="qz-opt" onclick="qzSelect('goal','Other',this)">Other</button>
+      </div>
+      <div class="qz-nav"><button type="button" class="qz-back" onclick="qzBack()">&larr; Back</button><span class="qz-count">Step 5 of 8</span></div>
+    </div>
+
+    <div class="qz-step" id="step-5">
+      <div class="qz-q">When are you looking to start?</div>
+      <div class="qz-opts">
+        <button type="button" class="qz-opt" onclick="qzScore('timeline','Immediately',3,this)">Immediately</button>
+        <button type="button" class="qz-opt" onclick="qzScore('timeline','Within 30 days',2,this)">Within 30 days</button>
+        <button type="button" class="qz-opt" onclick="qzScore('timeline','1–3 months',1,this)">1–3 months</button>
+        <button type="button" class="qz-opt" onclick="qzScore('timeline','Just researching',0,this)">I'm just researching</button>
+      </div>
+      <div class="qz-nav"><button type="button" class="qz-back" onclick="qzBack()">&larr; Back</button><span class="qz-count">Step 6 of 8</span></div>
+    </div>
+
+    <div class="qz-step" id="step-6">
+      <div class="qz-q">Where should we send your results?</div>
+      <form id="qz-form">
+        <input type="hidden" name="_subject" id="hid_subject" value="New Application — Leadhaus Ads" />
+        <input type="hidden" name="business_type" id="hid_business_type" />
+        <input type="hidden" name="revenue" id="hid_revenue" />
+        <input type="hidden" name="ad_spend" id="hid_ad_spend" />
+        <input type="hidden" name="challenge" id="hid_challenge" />
+        <input type="hidden" name="goal" id="hid_goal" />
+        <input type="hidden" name="timeline" id="hid_timeline" />
+        <input type="hidden" name="lead_score" id="hid_lead_score" />
+        <input type="hidden" name="lead_category" id="hid_lead_category" />
+        <input type="hidden" name="utm_source" id="hid_utm_source" />
+        <input type="hidden" name="utm_medium" id="hid_utm_medium" />
+        <input type="hidden" name="utm_campaign" id="hid_utm_campaign" />
+        <input type="hidden" name="utm_content" id="hid_utm_content" />
+        <input type="hidden" name="landing_page" id="hid_landing_page" />
+        <input type="hidden" name="submitted_at" id="hid_submitted_at" />
+        <div class="qz-f"><div class="qz-f-inner"><label>Full Name *</label><input type="text" name="full_name" required /></div></div>
+        <div class="qz-f"><div class="qz-f-inner"><label>Business / Brand Name *</label><input type="text" name="brand_name" required /></div></div>
+        <div class="qz-f"><div class="qz-f-inner"><label>WhatsApp Number *</label><input type="tel" name="whatsapp" placeholder="+234 XXX XXX XXXX" required /></div></div>
+        <div class="qz-f"><div class="qz-f-inner"><label>Email *</label><input type="email" name="email" required /></div></div>
+        <div class="qz-f"><div class="qz-f-inner"><label>Website Or Social Media URL *</label><input type="text" name="website_social" placeholder="yourbrand.com or @yourbrand" required /></div></div>
+        <button type="submit" class="qz-submit-btn" id="qz-submit-btn">See My Results</button>
+      </form>
+      <div class="qz-nav"><button type="button" class="qz-back" onclick="qzBack()">&larr; Back</button><span class="qz-count">Step 7 of 8</span></div>
+    </div>
+
+    <!-- QUALIFIED / HOT -->
+    <div class="qz-step" id="step-qualified">
+      <div class="qual-result">
         <div class="ti">✅</div>
-        <h3>You're In.</h3>
-        <p>We'll review your answers and follow up on WhatsApp within 24 hours to book your free strategy call. In the meantime, feel free to grab a slot directly.</p>
-        <a class="btn-p" href="https://calendly.com/leadhaus/30min" target="_blank">Book My Call Now</a>
+        <h3>You're A Potential Fit</h3>
+        <p>Based on your answers, it looks like Leadhaus may be able to help. The next step is a free strategy call where we'll look at your current acquisition system, identify the biggest opportunities, and determine whether we're a good fit to work together.</p>
+        <p style="font-family:var(--fd);font-size:16px;font-weight:800;text-transform:uppercase;color:var(--white)">Let's See What's Possible</p>
+        <p>This isn't a generic sales call — we'll review your current marketing, identify what's holding your acquisition system back, and determine whether Leadhaus can help.</p>
+        <iframe class="cal-embed" src="https://calendly.com/leadhaus/30min?embed_domain=leadhausstudios.com&embed_type=Inline&hide_gdpr_banner=1" title="Book a call with Leadhaus"></iframe>
+        <p style="margin-top:28px;font-weight:700;color:var(--white)">Before your call, have ready:</p>
+        <ul class="prep-list">
+          <li>Current monthly revenue</li>
+          <li>Current ad spend</li>
+          <li>Main acquisition channel today</li>
+          <li>Current cost per acquisition, if known</li>
+          <li>Your main growth goal</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- WARM -->
+    <div class="qz-step" id="step-warm">
+      <div class="qual-result">
+        <div class="ti">🤝</div>
+        <h3>You May Be A Fit — Timing Matters</h3>
+        <p>Based on your answers, Leadhaus could help, but the timing or current stage might mean a slightly different starting point than a full retainer. You're welcome to book a call if you'd like to talk it through — no pressure either way.</p>
+        <iframe class="cal-embed" src="https://calendly.com/leadhaus/30min?embed_domain=leadhausstudios.com&embed_type=Inline&hide_gdpr_banner=1" title="Book a call with Leadhaus"></iframe>
+      </div>
+    </div>
+
+    <!-- LOW-FIT -->
+    <div class="qz-step" id="step-lowfit">
+      <div class="qual-result">
+        <div class="ti">📋</div>
+        <h3>We May Not Be The Right Fit Just Yet</h3>
+        <p>Based on your answers, it looks like the timing or current stage isn't quite right for a strategy call yet — and we'd rather tell you that directly than fill a slot that isn't useful to you. Your answers are saved, and we'll follow up if that changes.</p>
+        <p>In the meantime, our <a href="packages.html" style="color:var(--red)">Performance Marketing Playbook</a> walks through the fundamentals we'd otherwise cover on a call — a good next step before applying again.</p>
+        <a class="btn-p" href="packages.html" style="margin-top:12px;display:inline-block">See The Playbook</a>
       </div>
     </div>
 
@@ -734,9 +1048,9 @@ h1 em{font-style:italic;color:var(--red)}
       <div class="qz-thanks">
         <div class="ti">⚠️</div>
         <h3>Something Went Wrong.</h3>
-        <p>Your answers didn't send — sorry about that. Try again, or reach us directly and we'll pick it up from there.</p>
+        <p>Your application didn't send — sorry about that. Try again, or reach us directly on WhatsApp.</p>
         <button type="button" class="qz-submit-btn" style="margin-bottom:14px" onclick="qzRetry()">Try Again</button>
-        <div><a class="btn-g" href="https://wa.me/2340000000000" target="_blank">Message Us On WhatsApp</a></div>
+        <a class="btn-g" href="https://wa.me/2340000000000" target="_blank">Message Us On WhatsApp</a>
       </div>
     </div>
   </div>
@@ -746,9 +1060,9 @@ h1 em{font-style:italic;color:var(--red)}
 <section class="vsl-final">
   <div class="fade-up">
     <div class="sec-label" style="justify-content:center">Ready?</div>
-    <h2>Stop Guessing. Start Tracking.</h2>
-    <p>The call is free. The clarity is worth more than what you'd spend guessing for another month.</p>
-    <a href="#vsl-quiz" class="btn-p">Book My Free Strategy Call</a>
+    <h2>Ready To Find Out What's<br/>Holding Your Ads Back?</h2>
+    <p>Apply for a free strategy call and let's look at your current acquisition system.</p>
+    <a href="#qual-quiz" class="btn-p">See If We're A Fit</a>
   </div>
 </section>
 
@@ -757,20 +1071,14 @@ h1 em{font-style:italic;color:var(--red)}
 </main>
 
 <div class="vsl-sticky" id="vsl-sticky">
-  <span>Free 30-min strategy call</span>
-  <a href="#vsl-quiz" class="btn-p">Book Now</a>
+  <span>Free strategy call &middot; Applications reviewed</span>
+  <a href="#qual-quiz" class="btn-p">See If We're A Fit</a>
 </div>
 
 <script>
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});},{threshold:.1});
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 setTimeout(()=>{document.querySelectorAll('.fade-up').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('show');});},100);
-
-function vslPlay(){
-  // Placeholder click handler — once a real video embed is added (see comment in the player block),
-  // swap this to reveal the iframe/video and hide the poster + play button instead of this alert.
-  document.getElementById('vsl-player').style.cursor='default';
-}
 
 function vslFaq(btn){
   const item = btn.closest('.vsl-faq-item');
@@ -780,46 +1088,104 @@ function vslFaq(btn){
 }
 
 const stickyObs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    document.getElementById('vsl-sticky').classList.toggle('show', !e.isIntersecting);
-  });
+  entries.forEach(e=>{ document.getElementById('vsl-sticky').classList.toggle('show', !e.isIntersecting); });
 },{threshold:0});
-stickyObs.observe(document.querySelector('.vsl-cta-below'));
+stickyObs.observe(document.querySelector('.vsl-hero'));
 
-const qzSteps = ['step-0','step-1','step-2','step-3'];
+/* ===== TRACKING STUBS =====
+   Replace these with real Meta Pixel / GA4 calls once IDs are available, e.g.:
+   fbq('trackCustom', 'ApplicationStarted');  gtag('event', 'application_started');
+   Each stage below is commented at the point it fires. */
+function track(eventName, data){
+  // window.fbq && fbq('trackCustom', eventName, data||{});
+  // window.gtag && gtag('event', eventName, data||{});
+  console.log('[track]', eventName, data||{});
+}
+track('page_view');
+
+const qzSteps = ['step-0','step-1','step-2','step-3','step-4','step-5','step-6'];
 let qzIdx = 0;
+let qzScores = { revenue: 0, ad_spend: 0, timeline: 0 };
+let qzStarted = false;
+
 function qzShow(){
   document.getElementById('step-error').classList.remove('active');
-  qzSteps.forEach((id,i)=>document.getElementById(id).classList.toggle('active', i===qzIdx));
+  document.querySelectorAll('.qz-step').forEach(s=>s.classList.remove('active'));
+  document.getElementById(qzSteps[qzIdx]).classList.add('active');
   document.getElementById('qz-bar').style.width = (qzIdx/(qzSteps.length-1)*100)+'%';
-  window.scrollTo({top:document.getElementById('vsl-quiz').offsetTop-20,behavior:'smooth'});
+  window.scrollTo({top:document.getElementById('qual-quiz').offsetTop-20,behavior:'smooth'});
 }
 function qzSelect(hiddenId, value, btn){
+  if(!qzStarted){ qzStarted = true; track('application_started'); }
   btn.parentElement.querySelectorAll('.qz-opt').forEach(o=>o.classList.remove('sel'));
   btn.classList.add('sel');
   document.getElementById('hid_'+hiddenId).value = value;
   setTimeout(()=>{ qzIdx++; qzShow(); }, 300);
 }
+function qzScore(hiddenId, value, points, btn){
+  qzScores[hiddenId] = points;
+  qzSelect(hiddenId, value, btn);
+}
 function qzBack(){ if(qzIdx>0){ qzIdx--; qzShow(); } }
+
+function getUTM(name){
+  const params = new URLSearchParams(window.location.search);
+  return params.get(name) || '';
+}
 
 document.getElementById('qz-form').addEventListener('submit', function(e){
   e.preventDefault();
   const btn = document.getElementById('qz-submit-btn');
   btn.disabled = true; btn.textContent = 'Submitting…';
+
+  // Compute lead score + category (internal only — never shown to the visitor)
+  const totalScore = qzScores.revenue + qzScores.ad_spend + qzScores.timeline;
+  let category = 'WARM';
+  if (qzScores.revenue === 0 || (qzScores.timeline === 0 && qzScores.ad_spend === 0)) {
+    category = 'LOW-FIT';
+  } else if (totalScore >= 8) {
+    category = 'HOT';
+  }
+
+  document.getElementById('hid_lead_score').value = totalScore;
+  document.getElementById('hid_lead_category').value = category;
+  document.getElementById('hid_subject').value = 'New ' + category + ' Application — Leadhaus Ads';
+  document.getElementById('hid_utm_source').value = getUTM('utm_source');
+  document.getElementById('hid_utm_medium').value = getUTM('utm_medium');
+  document.getElementById('hid_utm_campaign').value = getUTM('utm_campaign');
+  document.getElementById('hid_utm_content').value = getUTM('utm_content');
+  document.getElementById('hid_landing_page').value = window.location.href;
+  document.getElementById('hid_submitted_at').value = new Date().toISOString();
+
+  track('application_completed', {category: category});
+
   fetch('https://formspree.io/f/mwvrrbro', {
     method: 'POST',
     body: new FormData(this),
     headers: { 'Accept': 'application/json' }
   }).then((r)=>{
-      btn.disabled = false; btn.textContent = 'Get My Free Strategy';
-      if(r.ok){ qzIdx++; qzShow(); } else { qzShowError(); }
+      btn.disabled = false; btn.textContent = 'See My Results';
+      if(r.ok){
+        document.querySelectorAll('.qz-step').forEach(s=>s.classList.remove('active'));
+        if(category === 'HOT'){
+          document.getElementById('step-qualified').classList.add('active');
+          track('qualified_lead');
+        } else if(category === 'WARM'){
+          document.getElementById('step-warm').classList.add('active');
+          track('warm_lead');
+        } else {
+          document.getElementById('step-lowfit').classList.add('active');
+          track('low_fit_lead');
+        }
+        window.scrollTo({top:document.getElementById('qual-quiz').offsetTop-20,behavior:'smooth'});
+      } else { qzShowError(); }
     })
-    .catch(()=>{ btn.disabled = false; btn.textContent = 'Get My Free Strategy'; qzShowError(); });
+    .catch(()=>{ btn.disabled = false; btn.textContent = 'See My Results'; qzShowError(); });
 });
 function qzShowError(){
   document.querySelectorAll('.qz-step').forEach(s=>s.classList.remove('active'));
   document.getElementById('step-error').classList.add('active');
-  window.scrollTo({top:document.getElementById('vsl-quiz').offsetTop-20,behavior:'smooth'});
+  window.scrollTo({top:document.getElementById('qual-quiz').offsetTop-20,behavior:'smooth'});
 }
 function qzRetry(){
   document.getElementById('step-error').classList.remove('active');

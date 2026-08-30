@@ -429,6 +429,10 @@ h1 em{font-style:italic;color:var(--red)}
 .fit-c.no ul li::before{content:'—';color:var(--muted);flex-shrink:0}
 
 .qual-result{text-align:center;padding:20px 0}
+.video-ph{max-width:640px;margin:0 auto 32px;aspect-ratio:16/9;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
+.video-ph .vp-icon{width:64px;height:64px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center}
+.video-ph .vp-icon::after{content:'';border-left:18px solid white;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+.video-ph span{font-size:11px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
 .qual-result .ti{font-size:40px;margin-bottom:16px}
 .qual-result h3{font-family:var(--fd);font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:14px}
 .qual-result p{font-size:14px;color:var(--dim);line-height:1.75;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto}
@@ -747,7 +751,7 @@ h1 em{font-style:italic;color:var(--red)}
 
     <div class="cs2-shots">
       <div class="cs2-shot">
-        <img src="proof-shopify-revenue.jpeg" alt="Shopify dashboard showing $80,738.38 in total sales over Apr 1 to Jul 31 2026"/>
+        <img src="images/proof-shopify-revenue.jpeg" alt="Shopify dashboard showing $80,738.38 in total sales over Apr 1 to Jul 31 2026"/>
         <div class="cs2-shot-cap"><strong>Store dashboard, screenshotted directly.</strong> $80,738.38 total sales, 231 orders, 75.1K sessions (+14.9%) over the period shown. This reflects total store revenue for the period — not a claim that 100% of it came from paid ads alone unless that attribution is confirmed.</div>
       </div>
     </div>
@@ -766,7 +770,7 @@ h1 em{font-style:italic;color:var(--red)}
 
     <div class="cs2-shots">
       <div class="cs2-shot">
-        <img src="proof-klaviyo-moelle.png" alt="Klaviyo dashboard showing Moelle Zavian $3,577.60 attributed revenue from email flows"/>
+        <img src="images/proof-klaviyo-moelle.png" alt="Klaviyo dashboard showing Moelle Zavian $3,577.60 attributed revenue from email flows"/>
         <div class="cs2-shot-cap"><strong>Klaviyo dashboard, screenshotted directly.</strong> $3,577.60 attributed revenue (14.09% of total store revenue for the period), 100% of it from flows — up 57% vs. the previous period. Zero of this came from campaigns, meaning it's entirely automated flow revenue the business wasn't capturing before.</div>
       </div>
     </div>
@@ -785,11 +789,11 @@ h1 em{font-style:italic;color:var(--red)}
 
     <div class="cs2-shots">
       <div class="cs2-shot">
-        <img src="proof-usa-tier1-adset.jpeg" alt="Meta Ads Manager showing USA Tier 1 ad set with 409 checkout-initiate results"/>
+        <img src="images/proof-usa-tier1-adset.jpeg" alt="Meta Ads Manager showing USA Tier 1 ad set with 409 checkout-initiate results"/>
         <div class="cs2-shot-cap"><strong>USA Tier 1 ad set.</strong> 409 website checkout-initiates at ₦7,304.65 cost per result, ₦2,987,601.52 spent, 169,755 impressions.</div>
       </div>
       <div class="cs2-shot">
-        <img src="proof-moelle-campaigns.jpeg" alt="Meta Ads Manager showing Moelle Dm May and April Usa campaigns"/>
+        <img src="images/proof-moelle-campaigns.jpeg" alt="Meta Ads Manager showing Moelle Dm May and April Usa campaigns"/>
         <div class="cs2-shot-cap"><strong>Moelle Dm May &amp; April Usa campaigns.</strong> 1,431 messaging conversations, ₦4,468,001.53 + ₦3,523,643.29 spent, 417,734 + 195,104 impressions combined.</div>
       </div>
     </div>
@@ -1005,13 +1009,13 @@ h1 em{font-style:italic;color:var(--red)}
 
     <!-- QUALIFIED / HOT -->
     <div class="qz-step" id="step-qualified">
-      <div class="qual-result">
+      <div class="qual-result" id="qualified-pre-booking">
         <div class="ti">✅</div>
         <h3>You're A Potential Fit</h3>
         <p>Based on your answers, it looks like Leadhaus may be able to help. The next step is a free strategy call where we'll look at your current acquisition system, identify the biggest opportunities, and determine whether we're a good fit to work together.</p>
         <p style="font-family:var(--fd);font-size:16px;font-weight:800;text-transform:uppercase;color:var(--white)">Let's See What's Possible</p>
         <p>This isn't a generic sales call — we'll review your current marketing, identify what's holding your acquisition system back, and determine whether Leadhaus can help.</p>
-        <iframe class="cal-embed" src="https://calendly.com/leadhaus/30min?embed_domain=leadhausstudios.com&embed_type=Inline&hide_gdpr_banner=1" title="Book a call with Leadhaus"></iframe>
+        <iframe class="cal-embed" data-cal-widget src="https://calendly.com/leadhaus/30min?embed_domain=leadhausstudios.com&embed_type=Inline&hide_gdpr_banner=1" title="Book a call with Leadhaus"></iframe>
         <p style="margin-top:28px;font-weight:700;color:var(--white)">Before your call, have ready:</p>
         <ul class="prep-list">
           <li>Current monthly revenue</li>
@@ -1021,15 +1025,52 @@ h1 em{font-style:italic;color:var(--red)}
           <li>Your main growth goal</li>
         </ul>
       </div>
+
+      <!-- Revealed automatically once Calendly confirms a booking — see calendlyBookedHandler() -->
+      <div class="qual-result" id="post-booking-panel" style="display:none">
+        <div class="ti">✅</div>
+        <h3>You're Booked.</h3>
+        <p>Confirmation is on its way to your email and WhatsApp. Before the call, watch this 2-3 minute video — it covers who Leadhaus is, what happens on the call, and how to get the most out of it.</p>
+        <div class="video-ph" id="pre-call-video">
+          <div class="vp-icon"></div>
+          <span>Pre-call video — swap in once filmed</span>
+          <!--
+            SWAP-IN INSTRUCTIONS: replace this placeholder div with a real embed once the video exists, e.g.
+            <iframe src="https://player.vimeo.com/video/XXXXXXX" style="width:100%;height:100%;border:0"></iframe>
+          -->
+        </div>
+        <p style="font-weight:700;color:var(--white);margin-bottom:14px">The video covers:</p>
+        <ul class="prep-list">
+          <li>Who Leadhaus is and how we work</li>
+          <li>Exactly what happens on the call</li>
+          <li>What to have ready (see below)</li>
+          <li>That the call is about fit — no pressure, no hard sell</li>
+        </ul>
+        <p style="font-weight:700;color:var(--white);margin:24px 0 14px">Have this ready before we talk:</p>
+        <ul class="prep-list">
+          <li>Current monthly revenue</li>
+          <li>Current ad spend</li>
+          <li>Main acquisition channel today</li>
+          <li>Current cost per acquisition, if known</li>
+          <li>Your main growth goal</li>
+        </ul>
+        <p style="font-size:12px;color:var(--muted);margin-top:24px">Need to reschedule? Use the link in your confirmation email — no need to fill this form out again.</p>
+      </div>
     </div>
 
     <!-- WARM -->
     <div class="qz-step" id="step-warm">
-      <div class="qual-result">
+      <div class="qual-result" id="warm-pre-booking">
         <div class="ti">🤝</div>
         <h3>You May Be A Fit — Timing Matters</h3>
         <p>Based on your answers, Leadhaus could help, but the timing or current stage might mean a slightly different starting point than a full retainer. You're welcome to book a call if you'd like to talk it through — no pressure either way.</p>
-        <iframe class="cal-embed" src="https://calendly.com/leadhaus/30min?embed_domain=leadhausstudios.com&embed_type=Inline&hide_gdpr_banner=1" title="Book a call with Leadhaus"></iframe>
+        <iframe class="cal-embed" data-cal-widget src="https://calendly.com/leadhaus/30min?embed_domain=leadhausstudios.com&embed_type=Inline&hide_gdpr_banner=1" title="Book a call with Leadhaus"></iframe>
+      </div>
+      <div class="qual-result" id="post-booking-panel-warm" style="display:none">
+        <div class="ti">✅</div>
+        <h3>You're Booked.</h3>
+        <p>Confirmation is on its way to your email and WhatsApp. Before the call, watch this short video — it covers who Leadhaus is and what to expect.</p>
+        <div class="video-ph"><div class="vp-icon"></div><span>Pre-call video — swap in once filmed</span></div>
       </div>
     </div>
 
@@ -1103,6 +1144,14 @@ function track(eventName, data){
 }
 track('page_view');
 
+/* ===== CRM WEBHOOK =====
+   See leadhaus-crm-setup-guide.md for the full Google Sheets setup.
+   Once deployed, paste the Apps Script Web App URL below — every
+   application will then be logged to the sheet in addition to the
+   Formspree email notification. Leave as-is until configured; the
+   submit handler skips this call safely if the placeholder is still here. */
+const CRM_WEBHOOK_URL = 'PASTE_YOUR_APPS_SCRIPT_URL_HERE';
+
 const qzSteps = ['step-0','step-1','step-2','step-3','step-4','step-5','step-6'];
 let qzIdx = 0;
 let qzScores = { revenue: 0, ad_spend: 0, timeline: 0 };
@@ -1159,6 +1208,17 @@ document.getElementById('qz-form').addEventListener('submit', function(e){
 
   track('application_completed', {category: category});
 
+  // Fire-and-forget to the CRM sheet in parallel with the Formspree email —
+  // 'no-cors' means we can't read the response, but the row still writes.
+  // Safe no-op until CRM_WEBHOOK_URL above is set to a real deployment URL.
+  if (CRM_WEBHOOK_URL && CRM_WEBHOOK_URL.indexOf('PASTE_YOUR') === -1) {
+    fetch(CRM_WEBHOOK_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new FormData(this)
+    }).catch(()=>{ /* CRM logging failure never blocks the actual application */ });
+  }
+
   fetch('https://formspree.io/f/mwvrrbro', {
     method: 'POST',
     body: new FormData(this),
@@ -1170,9 +1230,11 @@ document.getElementById('qz-form').addEventListener('submit', function(e){
         if(category === 'HOT'){
           document.getElementById('step-qualified').classList.add('active');
           track('qualified_lead');
+          track('calendar_opened');
         } else if(category === 'WARM'){
           document.getElementById('step-warm').classList.add('active');
           track('warm_lead');
+          track('calendar_opened');
         } else {
           document.getElementById('step-lowfit').classList.add('active');
           track('low_fit_lead');
@@ -1191,6 +1253,34 @@ function qzRetry(){
   document.getElementById('step-error').classList.remove('active');
   qzShow();
 }
+
+/* ===== CALENDLY BOOKING DETECTION =====
+   Calendly's embedded widget posts a window message the instant someone
+   successfully books — this works on every Calendly plan, no redirect
+   feature or paid tier required. We listen for it and swap the calendar
+   out for the post-booking panel (video + prep list) right on the page,
+   instead of relying on the visitor to check an email. */
+window.addEventListener('message', function(e){
+  if (e.data && e.data.event && e.data.event === 'calendly.event_scheduled') {
+    track('call_booked');
+    const preQ = document.getElementById('qualified-pre-booking');
+    const postQ = document.getElementById('post-booking-panel');
+    if (preQ && preQ.closest('.qz-step').classList.contains('active')) {
+      preQ.style.display = 'none';
+      postQ.style.display = 'block';
+      window.scrollTo({top:document.getElementById('qual-quiz').offsetTop-20,behavior:'smooth'});
+      return;
+    }
+    const preW = document.getElementById('warm-pre-booking');
+    const postW = document.getElementById('post-booking-panel-warm');
+    if (preW && preW.closest('.qz-step').classList.contains('active')) {
+      preW.style.display = 'none';
+      postW.style.display = 'block';
+      window.scrollTo({top:document.getElementById('qual-quiz').offsetTop-20,behavior:'smooth'});
+    }
+  }
+});
+
 </script>
 </body>
 </html>

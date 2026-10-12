@@ -787,10 +787,25 @@ function qzSelect(hiddenId, value, btn){
 }
 function qzBack(){ if(qzIdx>0){ qzIdx--; qzShow(); } }
 
+/* ===== LEADHAUS PORTAL =====
+   Sends a copy of this form to the Leadhaus portal (Admin > Leads).
+   Runs alongside Formspree and the Google Sheet; a failure here never
+   blocks the visitor. */
+const PORTAL_LEADS_URL = 'https://portal.leadhausstudios.com/api/leads';
+function sendToPortal(formEl){
+  try {
+    const fd = new FormData(formEl);
+    fd.set('form', 'creator');
+    fetch(PORTAL_LEADS_URL, { method: 'POST', mode: 'no-cors', keepalive: true, body: fd }).catch(()=>{});
+  } catch (e) {}
+}
+
 document.getElementById('qz-form').addEventListener('submit', function(e){
   e.preventDefault();
   const btn = document.getElementById('qz-submit-btn');
   btn.disabled = true; btn.textContent = 'Submitting…';
+  sendToPortal(this);
+
   fetch('https://formspree.io/f/mwvrrbro', {
     method: 'POST',
     body: new FormData(this),

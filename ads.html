@@ -1182,6 +1182,19 @@ function getUTM(name){
   return params.get(name) || '';
 }
 
+/* ===== LEADHAUS PORTAL =====
+   Sends a copy of this form to the Leadhaus portal (Admin > Leads).
+   Runs alongside Formspree and the Google Sheet; a failure here never
+   blocks the visitor. */
+const PORTAL_LEADS_URL = 'https://portal.leadhausstudios.com/api/leads';
+function sendToPortal(formEl){
+  try {
+    const fd = new FormData(formEl);
+    fd.set('form', 'ads');
+    fetch(PORTAL_LEADS_URL, { method: 'POST', mode: 'no-cors', keepalive: true, body: fd }).catch(()=>{});
+  } catch (e) {}
+}
+
 document.getElementById('qz-form').addEventListener('submit', function(e){
   e.preventDefault();
   const btn = document.getElementById('qz-submit-btn');
@@ -1218,6 +1231,8 @@ document.getElementById('qz-form').addEventListener('submit', function(e){
       body: new FormData(this)
     }).catch(()=>{ /* CRM logging failure never blocks the actual application */ });
   }
+
+  sendToPortal(this);
 
   fetch('https://formspree.io/f/mwvrrbro', {
     method: 'POST',

@@ -26,7 +26,20 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=3293678884167172&ev=PageView&noscript=1"
 /></noscript>
+
+<script>
+window.addEventListener("message", function (e) {
+  if (e.origin !== "https://calendly.com") return;
+
+  if (e.data?.event === "calendly.event_scheduled") {
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "Schedule");
+    }
+  }
+});
+</script>
 <!-- End Meta Pixel Code -->
+  
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Turn Your Ad Spend Into A Predictable Acquisition System — Leadhaus Studios</title>

@@ -12,10 +12,150 @@
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Packages & Pricing — Leadhaus Studios</title>
+<title>Services — Leadhaus Studios</title>
+<meta name="description" content="Paid advertising, creative strategy, email marketing and growth strategy from Leadhaus Studios — marketing systems built to turn attention into customers."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
+<style>
+.sv-wrap{max-width:1180px;margin:0 auto;padding:0 48px}
+.sv-btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--fd);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:16px 28px;transition:background .2s,color .2s,border-color .2s}
+.sv-btn.main{background:var(--white);color:var(--black)}
+.sv-btn.main:hover{background:var(--red);color:var(--white)}
+.sv-btn.main::after{content:'→';font-size:15px;letter-spacing:0}
+.sv-btn.line{border:1px solid var(--border);color:var(--white)}
+.sv-btn.line:hover{border-color:var(--white)}
+
+/* HERO */
+.sv-hero{padding:96px 0 80px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.sv-hero::after{content:'';position:absolute;right:-200px;top:-160px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(233,69,96,.07),transparent 65%);pointer-events:none}
+.sv-hero-g{display:grid;grid-template-columns:1.3fr .7fr;gap:72px;align-items:end;position:relative;z-index:1}
+.sv-hero h1{font-size:clamp(46px,6.2vw,88px);letter-spacing:-1.5px;margin-bottom:26px}
+.sv-hero-sub{font-size:17px;color:var(--off);max-width:560px;line-height:1.75;margin-bottom:34px}
+.sv-acts{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center}
+.sv-acts .note{font-size:12px;color:var(--dim)}
+.sv-index{list-style:none;border-top:1px solid var(--white)}
+.sv-index li{border-bottom:1px solid var(--border)}
+.sv-index a{display:grid;grid-template-columns:34px 1fr auto;align-items:center;padding:16px 0;text-decoration:none;color:var(--white);transition:color .2s,padding .2s}
+.sv-index a:hover{color:var(--red);padding-left:6px}
+.sv-index .l{font-family:var(--fd);font-weight:800;color:var(--red);font-size:14px}
+.sv-index .t{font-family:var(--fd);font-weight:800;font-size:20px;text-transform:uppercase}
+.sv-index .c{font-size:11px;color:var(--dim);letter-spacing:1px}
+
+/* CATEGORY */
+.sv-cat{padding:88px 0;border-bottom:1px solid var(--border);scroll-margin-top:64px}
+.sv-cat.light{background:var(--dark);color:var(--white);border-bottom-color:var(--border)}
+.sv-cat-g{display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start}
+.sv-cat-side{position:sticky;top:104px}
+.sv-letter{font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.sv-letter::before{content:'';width:28px;height:1px;background:currentColor}
+.sv-cat h2{font-size:clamp(36px,3.8vw,52px);margin-bottom:16px}
+.sv-cat-side p{font-size:15px;line-height:1.7;color:var(--dim);max-width:320px}
+.sv-cat.light .sv-cat-side p{color:var(--dim)}
+.sv-art{margin-top:34px;width:100%;max-width:260px;height:auto;display:block}
+.sv-cards{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
+.sv-cat.light .sv-cards{background:var(--border);border-color:var(--border)}
+.sv-cards.one{grid-template-columns:1fr}
+.sv-card{background:var(--dark);padding:34px 30px 30px;display:flex;flex-direction:column;scroll-margin-top:84px;transition:background .2s;position:relative}
+.sv-card::before{content:'';position:absolute;top:-1px;left:0;width:0;height:2px;background:var(--red);transition:width .3s}
+.sv-card:hover::before,.sv-card:target::before{width:100%}
+.sv-card:hover{background:var(--card)}
+.sv-cat.light .sv-card{background:var(--black)}
+.sv-cat.light .sv-card:hover{background:var(--card)}
+.sv-type{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.sv-card h3{font-family:var(--fd);font-size:26px;font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:12px}
+.sv-card p{font-size:14px;line-height:1.7;color:var(--dim);margin-bottom:18px}
+.sv-cat.light .sv-card p{color:var(--dim)}
+.sv-best{font-size:12px;line-height:1.55;color:var(--off);border-top:1px solid var(--border);padding-top:14px;margin-bottom:22px}
+.sv-cat.light .sv-best{color:var(--off);border-top-color:var(--border)}
+.sv-best b{font-weight:500;letter-spacing:1.5px;text-transform:uppercase;font-size:10px;color:var(--dim);display:block;margin-bottom:3px}
+.sv-cat.light .sv-best b{color:var(--dim)}
+.sv-go{margin-top:auto;font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--white);display:inline-flex;align-items:center;gap:8px;align-self:flex-start;border-bottom:1px solid var(--red);padding-bottom:3px}
+
+.sv-go::after{content:'→';transition:transform .2s}
+.sv-go:hover::after{transform:translateX(4px)}
+
+/* APPROACH */
+.sv-appr{padding:96px 0;border-bottom:1px solid var(--border)}
+.sv-appr-hd{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:52px}
+.sv-appr-hd p{font-size:15px;color:var(--dim);line-height:1.75;max-width:460px}
+.sv-loop{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.sv-loop::before{content:'';position:absolute;top:27px;left:28px;right:28px;height:1px;background:var(--border)}
+.sv-node{position:relative;padding-right:28px}
+.sv-dot{width:56px;height:56px;border-radius:50%;border:1px solid var(--border);background:var(--black);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:900;font-size:18px;color:var(--red);margin-bottom:22px;position:relative}
+.sv-node:first-child .sv-dot{background:var(--red);color:#fff;border-color:var(--red)}
+.sv-node h3{font-family:var(--fd);font-size:24px;font-weight:900;text-transform:uppercase;margin-bottom:8px}
+.sv-node p{font-size:14px;color:var(--dim);line-height:1.65}
+.sv-loop-back{margin-top:30px;font-size:12px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.sv-loop-back::before{content:'↺';color:var(--red);font-size:16px}
+
+/* ENGAGEMENT */
+.sv-eng{padding:96px 0;background:var(--dark);border-bottom:1px solid var(--border)}
+.sv-eng-hd{margin-bottom:44px;max-width:640px}
+.sv-eng-hd p{font-size:15px;color:var(--dim);line-height:1.7}
+.sv-eng-g{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--white)}
+.sv-eng-c{padding:28px 26px 8px 0;display:flex;flex-direction:column}
+.sv-eng-c + .sv-eng-c{padding-left:26px;border-left:1px solid var(--border)}
+.sv-eng-c .k{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.sv-eng-c h3{font-family:var(--fd);font-size:24px;font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:10px}
+.sv-eng-c p{font-size:13px;color:var(--dim);line-height:1.65;margin-bottom:14px}
+.sv-eng-c ul{list-style:none;margin-bottom:18px}
+.sv-eng-c li{font-size:13px;color:var(--off);padding:7px 0;border-top:1px solid var(--border)}
+.sv-price{font-family:var(--fd);font-size:30px;font-weight:900;line-height:1;margin-bottom:4px}
+.sv-price small{font-family:var(--fb);font-size:12px;font-weight:400;color:var(--dim)}
+.sv-price-n{font-size:11px;color:var(--dim);line-height:1.5;margin-bottom:18px}
+
+
+/* RESULTS */
+.sv-res{padding:88px 0;border-bottom:1px solid var(--border)}
+.sv-res-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.sv-res-g p{font-size:15px;color:var(--dim);line-height:1.7;margin-bottom:26px;max-width:420px}
+.sv-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
+.sv-stat{background:var(--dark);padding:28px 26px}
+.sv-stat .n{font-family:var(--fd);font-size:44px;font-weight:900;line-height:1}
+.sv-stat .n span{color:var(--red)}
+.sv-stat .l{font-size:13px;color:var(--off);margin-top:8px;line-height:1.45}
+.sv-stat .s{font-size:11px;color:var(--muted);margin-top:5px}
+
+/* FINAL */
+.sv-final{padding:104px 0;text-align:center;background:var(--dark)}
+.sv-final .sv-letter{justify-content:center}
+.sv-final h2{max-width:760px;margin:0 auto 16px}
+.sv-final p{font-size:16px;color:var(--dim);max-width:500px;margin:0 auto 34px;line-height:1.7}
+.sv-final .sv-acts{justify-content:center}
+
+@media(max-width:960px){
+  .sv-wrap{padding:0 24px}
+  .sv-hero{padding:64px 0 56px}
+  .sv-hero-g,.sv-cat-g,.sv-appr-hd,.sv-res-g{grid-template-columns:1fr;gap:40px}
+  .sv-cat-side{position:static}
+  .sv-art{max-width:200px;margin-top:24px}
+  .sv-cat-side p{max-width:none}
+  .sv-loop{grid-template-columns:1fr 1fr;gap:36px 0}
+  .sv-loop::before{display:none}
+  .sv-eng-g{grid-template-columns:1fr 1fr}
+  .sv-eng-c:nth-child(3){padding-left:0;border-left:none}
+  .sv-eng-c:nth-child(n+3){border-top:1px solid var(--border);padding-top:28px}
+}
+@media(max-width:640px){
+  .sv-hero h1{font-size:44px;letter-spacing:-1px}
+  .sv-hero-sub{font-size:16px}
+  .sv-acts .sv-btn{width:100%;justify-content:center}
+  .sv-cat,.sv-appr,.sv-eng,.sv-res{padding:60px 0}
+  .sv-cards{grid-template-columns:1fr}
+  .sv-card{padding:28px 22px 24px}
+  .sv-art{display:none}
+  .sv-loop{grid-template-columns:1fr;gap:28px}
+  .sv-node{display:grid;grid-template-columns:56px 1fr;gap:0 18px;padding:0}
+  .sv-dot{margin:0;grid-row:span 2}
+  .sv-eng-g{grid-template-columns:1fr}
+  .sv-eng-c,.sv-eng-c + .sv-eng-c{padding:26px 0 10px;border-left:none}
+  .sv-eng-c + .sv-eng-c{border-top:1px solid var(--border)}
+  .sv-stat{padding:22px 18px}
+  .sv-stat .n{font-size:36px}
+  .sv-final{padding:72px 0}
+}
+</style>
 </head>
 <body>
 <nav>
@@ -25,7 +165,8 @@
   </a>
   <ul class="nav-links">
   <li><a href="index.html">Home</a></li>
-  <li><a href="packages.html" class="active">Packages</a></li>
+  <li><a href="services.html" class="active">Services</a></li>
+  <li><a href="packages.html">Packages</a></li>
   <li><a href="results.html">Results</a></li>
   <li><a href="creators.html">For Creators</a></li>
   <li><a href="contact.html">Contact</a></li>
@@ -37,7 +178,8 @@
 </nav>
 <ul class="nav-mobile" id="nav-mobile">
   <li><a href="index.html">Home</a></li>
-  <li><a href="packages.html" class="active">Packages</a></li>
+  <li><a href="services.html" class="active">Services</a></li>
+  <li><a href="packages.html">Packages</a></li>
   <li><a href="results.html">Results</a></li>
   <li><a href="creators.html">For Creators</a></li>
   <li><a href="contact.html">Contact</a></li>
@@ -46,94 +188,280 @@
 </ul>
 
 <main>
-<section class="pkg-hero">
-    <div class="sec-label fade-up">Pricing</div>
-    <h2 class="fade-up d1">Simple Pricing.<br/><em>No Surprises.</em></h2>
-    <p class="fade-up d2" style="font-size:16px;color:var(--dim);max-width:520px;line-height:1.7">All packages are Leadhaus fees only. Ad spend is always separate — passed through at cost directly to Meta. Never marked up.</p>
-    <p class="pkg-note fade-up d3">2-month minimum on all retainers. Month-to-month with 30 days written notice after that.</p>
-  </section>
-  <div class="pkgs">
-    <div class="pkg-g">
-      <div class="pkg fade-up">
-        <div class="pkg-tag">Retainer &mdash; Monthly</div>
-        <div class="pkg-name">Essentials</div>
-        <div class="pkg-price">&#8358;400k</div>
-        <div class="pkg-mo">/month</div>
-        <ul class="pkg-list">
-          <li>Paid ads strategy &amp; management</li>
-          <li>Awareness + conversion campaign</li>
-          <li>8 posts + captions per month</li>
-          <li>2 Reels &mdash; shot and edited</li>
-          <li>6 static graphics</li>
-          <li>Monthly performance report</li>
-          <li>Weekly client check-in</li>
-        </ul>
-      </div>
-      <div class="pkg feat fade-up d1">
-        <div class="pkg-tag">Most Popular</div>
-        <div class="pkg-name">Growth</div>
-        <div class="pkg-price">&#8358;700k</div>
-        <div class="pkg-mo">/month</div>
-        <ul class="pkg-list">
-          <li>Full ads management + UGC-led creative</li>
-          <li>12 posts + captions per month</li>
-          <li>4 Reels + quarterly content shoot</li>
-          <li>8 statics + full ad creative set</li>
-          <li>UGC creator direction &amp; briefing</li>
-          <li>Bi-weekly check-in</li>
-          <li>Detailed monthly report</li>
-        </ul>
-      </div>
-      <div class="pkg fade-up d2">
-        <div class="pkg-tag">Full Capacity</div>
-        <div class="pkg-name">Studio</div>
-        <div class="pkg-price">&#8358;1.1m</div>
-        <div class="pkg-mo">/month</div>
-        <ul class="pkg-list">
-          <li>Ads + performance influencer campaigns</li>
-          <li>16 posts + full content system</li>
-          <li>6 Reels + concept video</li>
-          <li>Monthly shoot included</li>
-          <li>Brand identity built in Month 1</li>
-          <li>Full UGC creator network</li>
-          <li>Two strategy calls monthly</li>
-        </ul>
+
+<!-- 1. HERO -->
+<section class="sv-hero">
+  <div class="sv-wrap sv-hero-g">
+    <div>
+      <div class="sv-letter">Services</div>
+      <h1>Marketing Systems Built To Turn <em>Attention Into Customers.</em></h1>
+      <p class="sv-hero-sub">We combine paid acquisition, creative strategy and retention into one connected system — so the people your ads reach become customers, and customers come back. Judged on leads and revenue, not likes.</p>
+      <div class="sv-acts">
+        <a href="ads.html#qual-quiz" class="sv-btn main">Find the Right Service</a>
+        <span class="note">8 quick questions &middot; instant recommendation</span>
       </div>
     </div>
-    <div class="lr-strip fade-up">
+    <ul class="sv-index" aria-label="Service categories">
+      <li><a href="#paid-advertising"><span class="l">A</span><span class="t">Paid Advertising</span><span class="c">4 services</span></a></li>
+      <li><a href="#creative-strategy"><span class="l">B</span><span class="t">Creative Strategy</span><span class="c">2 services</span></a></li>
+      <li><a href="#email-retention"><span class="l">C</span><span class="t">Email &amp; Retention</span><span class="c">2 services</span></a></li>
+      <li><a href="#growth-strategy"><span class="l">D</span><span class="t">Growth Strategy</span><span class="c">2 services</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 2. SERVICES -->
+<!-- A. PAID ADVERTISING -->
+<section class="sv-cat light" id="paid-advertising">
+  <div class="sv-wrap sv-cat-g">
+    <div class="sv-cat-side">
+      <div class="sv-letter">A &mdash; Acquisition</div>
+      <h2>Paid Advertising</h2>
+      <p>Campaigns built and managed against the number that matters — cost per lead, cost per customer, revenue — whether you're launching, fixing or scaling.</p>
+      <svg class="sv-art" viewBox="0 0 260 120" aria-hidden="true">
+        <g fill="none" stroke="#77778A" stroke-width="1"><line x1="0" y1="119.5" x2="260" y2="119.5"/></g>
+        <g fill="#35354A"><rect x="8" y="84" width="30" height="36"/><rect x="56" y="70" width="30" height="50"/><rect x="104" y="74" width="30" height="46"/><rect x="152" y="46" width="30" height="74"/></g>
+        <rect x="200" y="14" width="30" height="106" fill="#E94560"/>
+        <polyline points="23,80 71,64 119,68 167,40 215,8" fill="none" stroke="#77778A" stroke-width="1.2"/>
+      </svg>
+    </div>
+    <div class="sv-cards">
+      <article class="sv-card" id="meta-ads-management">
+        <div class="sv-type">Ongoing &middot; Management</div>
+        <h3>Meta Ads Management</h3>
+        <p>Campaign strategy, creative testing, audience development, optimisation and scaling across Facebook and Instagram.</p>
+        <div class="sv-best"><b>Best for</b>Businesses with a proven offer ready to grow paid acquisition.</div>
+        <a class="sv-go" href="ads.html#qual-quiz">Check your fit</a>
+      </article>
+      <article class="sv-card" id="google-ads">
+        <div class="sv-type">Ongoing &middot; Management</div>
+        <h3>Google Ads</h3>
+        <p>Paid search and other relevant Google advertising, used where it fits your market and buying journey.</p>
+        <div class="sv-best"><b>Best for</b>Businesses whose customers are already searching for what they sell.</div>
+        <a class="sv-go" href="https://calendly.com/leadhaus/30min" target="_blank" rel="noopener">Book a discovery call</a>
+      </article>
+      <article class="sv-card" id="meta-ads-account-setup">
+        <div class="sv-type">One-off &middot; Setup</div>
+        <h3>Meta Ads Account Setup</h3>
+        <p>Ad accounts, tracking foundations, campaign structure and the infrastructure you need to start paid acquisition properly.</p>
+        <div class="sv-best"><b>Best for</b>Businesses about to run ads for the first time — or starting over.</div>
+        <!-- Swap for a dedicated setup page when live -->
+        <a class="sv-go" href="contact.html?service=meta-ads-account-setup">Enquire about setup</a>
+      </article>
+      <article class="sv-card" id="ad-account-audit">
+        <div class="sv-type">One-off &middot; Diagnostic</div>
+        <h3>Ad Account Audit</h3>
+        <p>A structured review of your campaigns, creative, targeting, tracking and performance — what's broken and where the opportunities are.</p>
+        <div class="sv-best"><b>Best for</b>Advertisers spending money without knowing what's working.</div>
+        <!-- Swap for the dedicated audit page / purchase link when live -->
+        <a class="sv-go" href="contact.html?service=ad-account-audit">Request an audit</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- B. CREATIVE STRATEGY -->
+<section class="sv-cat" id="creative-strategy">
+  <div class="sv-wrap sv-cat-g">
+    <div class="sv-cat-side">
+      <div class="sv-letter">B &mdash; Creative</div>
+      <h2>Creative Strategy</h2>
+      <p>The ad is what people actually see. We develop the concepts, hooks and messaging that give your campaigns something worth stopping for.</p>
+      <svg class="sv-art" viewBox="0 0 260 120" aria-hidden="true">
+        <rect x="10.5" y="20.5" width="74" height="94" fill="none" stroke="#1E1E2A"/>
+        <rect x="60.5" y="10.5" width="74" height="94" fill="none" stroke="#35354A"/>
+        <rect x="110.5" y="0.5" width="74" height="94" fill="#15151D" stroke="#E94560"/>
+        <line x1="124" y1="66" x2="170" y2="66" stroke="#E94560" stroke-width="2"/>
+        <line x1="124" y1="76" x2="156" y2="76" stroke="#35354A"/>
+        <circle cx="147" cy="34" r="12" fill="none" stroke="#AAAABB"/>
+      </svg>
+    </div>
+    <div class="sv-cards">
+      <article class="sv-card" id="ad-creative-strategy">
+        <div class="sv-type">Strategy</div>
+        <h3>Ad Creative Strategy</h3>
+        <p>Creative concepts, hooks, messaging angles and briefs designed to improve advertising performance.</p>
+        <div class="sv-best"><b>Best for</b>Getting clicks but not sales, or creative that's gone stale.</div>
+        <a class="sv-go" href="ads.html#qual-quiz">Find your fit</a>
+      </article>
+      <article class="sv-card" id="creative-production">
+        <div class="sv-type">Production</div>
+        <h3>Creative Production</h3>
+        <p>Advertising assets and creative variations, developed with our creative production team so there's always something new to test.</p>
+        <div class="sv-best"><b>Best for</b>Brands that need a steady supply of ad-ready creative.</div>
+        <a class="sv-go" href="https://calendly.com/leadhaus/30min" target="_blank" rel="noopener">Discuss a project</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- C. EMAIL & RETENTION -->
+<section class="sv-cat light" id="email-retention">
+  <div class="sv-wrap sv-cat-g">
+    <div class="sv-cat-side">
+      <div class="sv-letter">C &mdash; Retention</div>
+      <h2>Email Marketing &amp; Retention</h2>
+      <p>Acquisition gets the first sale. Email recovers the ones you nearly lost and brings customers back — revenue you already paid to earn.</p>
+      <svg class="sv-art" viewBox="0 0 260 120" aria-hidden="true">
+        <g fill="none" stroke="#77778A"><path d="M10 20 H90 Q110 20 110 40 V60"/><path d="M110 60 V80 Q110 100 130 100 H250"/><path d="M110 60 H250"/></g>
+        <circle cx="10" cy="20" r="6" fill="#E94560"/>
+        <g fill="#111118" stroke="#77778A"><rect x="150.5" y="52.5" width="40" height="16"/><rect x="150.5" y="92.5" width="40" height="16"/><rect x="200.5" y="52.5" width="40" height="16"/></g>
+        <rect x="210.5" y="92.5" width="40" height="16" fill="#E94560"/>
+      </svg>
+    </div>
+    <div class="sv-cards">
+      <article class="sv-card" id="email-marketing-setup">
+        <div class="sv-type">One-off &middot; Setup</div>
+        <h3>Email Marketing Setup</h3>
+        <p>Foundational email infrastructure and automated flows — welcome, abandoned checkout and post-purchase sequences.</p>
+        <div class="sv-best"><b>Best for</b>Online stores with traffic but no email system capturing it.</div>
+        <!-- Swap for a dedicated email setup page when live -->
+        <a class="sv-go" href="contact.html?service=email-marketing-setup">Enquire about setup</a>
+      </article>
+      <article class="sv-card" id="email-marketing-management">
+        <div class="sv-type">Ongoing &middot; Management</div>
+        <h3>Email Marketing Management</h3>
+        <p>Ongoing campaigns, segmentation, retention strategy and optimisation to grow repeat revenue.</p>
+        <div class="sv-best"><b>Best for</b>Brands with a list that isn't yet pulling its weight.</div>
+        <a class="sv-go" href="https://calendly.com/leadhaus/30min" target="_blank" rel="noopener">Book a discovery call</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- D. GROWTH STRATEGY -->
+<section class="sv-cat" id="growth-strategy">
+  <div class="sv-wrap sv-cat-g">
+    <div class="sv-cat-side">
+      <div class="sv-letter">D &mdash; Strategy</div>
+      <h2>Growth Strategy</h2>
+      <p>For when the question isn't "which ad?" but "what should we do next?" — from a single focused session to a full partnership.</p>
+      <svg class="sv-art" viewBox="0 0 260 120" aria-hidden="true">
+        <g fill="none" stroke="#1E1E2A"><circle cx="70" cy="60" r="56"/><circle cx="70" cy="60" r="38"/></g>
+        <circle cx="70" cy="60" r="20" fill="none" stroke="#35354A"/>
+        <circle cx="70" cy="60" r="6" fill="#E94560"/>
+        <line x1="130" y1="60" x2="250" y2="60" stroke="#E94560"/>
+        <polyline points="240,52 250,60 240,68" fill="none" stroke="#E94560"/>
+      </svg>
+    </div>
+    <div class="sv-cards">
+      <article class="sv-card" id="clarity-session">
+        <div class="sv-type">Consultation</div>
+        <h3>Clarity Session</h3>
+        <p>A focused consultation to understand your marketing challenges and identify the right next steps — before you commit budget.</p>
+        <div class="sv-best"><b>Best for</b>Owners who know something isn't working but not what to fix first.</div>
+        <!-- Swap for the Clarity Session booking / payment page when live -->
+        <a class="sv-go" href="contact.html?service=clarity-session">Book a Clarity Session</a>
+      </article>
+      <article class="sv-card" id="growth-marketing-partnership">
+        <div class="sv-type">Partnership</div>
+        <h3>Growth Marketing Partnership</h3>
+        <p>A comprehensive engagement combining acquisition strategy, advertising, creative direction, conversion improvements and retention.</p>
+        <div class="sv-best"><b>Best for</b>Businesses ready for one partner across the whole growth system.</div>
+        <a class="sv-go" href="https://calendly.com/leadhaus/30min" target="_blank" rel="noopener">Book a discovery call</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. APPROACH -->
+<section class="sv-appr">
+  <div class="sv-wrap">
+    <div class="sv-appr-hd">
       <div>
-        <div class="lr-tag">One-Time &mdash; 4-Week Delivery &mdash; Coaches &amp; Fitness</div>
-        <div class="lr-title">Launch Ready</div>
-        <div class="lr-desc">Brand identity, half-day video shoot, 30-day content system, quiz funnel with personalised result pages, and full Meta ads setup &mdash; all in 4 weeks. The complete client acquisition system for coaches who are serious about growing beyond word of mouth.</div>
+        <div class="sv-letter">How We Approach Growth</div>
+        <h2>More Than<br/><em>Running Ads.</em></h2>
       </div>
-      <div class="lr-right">
-        <span class="lr-price">&#8358;450k</span>
-        <span class="lr-note">one-time &middot; ad spend separate (min &#8358;50k/mo)</span>
-        <br/><br/>
-        <a class="btn-p" href="contact.html">Book a Call</a>
+      <p>A well-run ad account pointed at a weak offer or a leaky journey still fails. So we treat growth as four connected parts — and fix the one that's actually holding you back.</p>
+    </div>
+    <div class="sv-loop">
+      <div class="sv-node"><div class="sv-dot">01</div><h3>Acquisition</h3><p>Reaching and converting the right potential customers.</p></div>
+      <div class="sv-node"><div class="sv-dot">02</div><h3>Creative</h3><p>Messaging and creative that drives action.</p></div>
+      <div class="sv-node"><div class="sv-dot">03</div><h3>Conversion</h3><p>Improving the journey from interest to purchase.</p></div>
+      <div class="sv-node"><div class="sv-dot">04</div><h3>Retention</h3><p>Stronger customer relationships and repeat revenue.</p></div>
+    </div>
+    <div class="sv-loop-back">Retention feeds acquisition — better customer value means more room to spend.</div>
+  </div>
+</section>
+
+<!-- 4. ENGAGEMENT OPTIONS -->
+<section class="sv-eng">
+  <div class="sv-wrap">
+    <div class="sv-eng-hd">
+      <div class="sv-letter">Ways To Work With Us</div>
+      <h2>Start Where It Makes Sense.</h2>
+      <p>Fix one thing, get a second opinion, or hand over the whole system. Ad spend is always separate and paid directly to the platform — never marked up.</p>
+    </div>
+    <div class="sv-eng-g">
+      <div class="sv-eng-c">
+        <div class="k">01 &middot; One-off</div>
+        <h3>One-off Services</h3>
+        <p>A defined piece of work with a clear deliverable.</p>
+        <ul><li>Ad Account Audit</li><li>Meta Ads Account Setup</li><li>Email Marketing Setup</li></ul>
+        <div class="sv-price-n">Scoped and quoted per project.</div>
+        <a class="sv-go" href="contact.html?service=one-off">Enquire</a>
+      </div>
+      <div class="sv-eng-c">
+        <div class="k">02 &middot; Consultation</div>
+        <h3>Strategy &amp; Consultation</h3>
+        <p>Expert eyes on your marketing and a clear plan for what to do next.</p>
+        <ul><li>Clarity Session</li></ul>
+        <div class="sv-price-n">Details shared when you book.</div>
+        <a class="sv-go" href="contact.html?service=clarity-session">Book a session</a>
+      </div>
+      <div class="sv-eng-c">
+        <div class="k">03 &middot; Monthly</div>
+        <h3>Ongoing Management</h3>
+        <p>Your ads and creative run and optimised month to month.</p>
+        <div class="sv-price">&#8358;400k <small>/month from</small></div>
+        <div class="sv-price-n">Essentials &#8358;400k &middot; Growth &#8358;700k &middot; Studio &#8358;1.1m. 2-month minimum, then 30 days' notice.</div>
+        <a class="sv-go" href="packages.html">See packages</a>
+      </div>
+      <div class="sv-eng-c">
+        <div class="k">04 &middot; Partnership</div>
+        <h3>Growth Partnership</h3>
+        <p>Acquisition, creative, conversion and retention under one plan and one team.</p>
+        <div class="sv-price-n">Custom scope, agreed after a discovery call.</div>
+        <a class="sv-go" href="https://calendly.com/leadhaus/30min" target="_blank" rel="noopener">Book a discovery call</a>
       </div>
     </div>
   </div>
-  <div class="addons">
-    <h3 class="fade-up">Bolt-ons</h3>
-    <div class="addon-g">
-      <div class="addon fade-up"><div class="addon-n">Content Posting</div><div class="addon-d">Daily scheduling and publishing across Instagram and Facebook. Client approves all content before posting.</div><div class="addon-p">&#8358;60k/mo</div></div>
-      <div class="addon fade-up"><div class="addon-n">Community Management</div><div class="addon-d">DM responses, comment replies, story interactions. Business hours, Lagos timezone.</div><div class="addon-p">&#8358;80k/mo</div></div>
-      <div class="addon fade-up"><div class="addon-n">Additional Reel</div><div class="addon-d">One extra Reel outside retainer scope. Written brief required.</div><div class="addon-p">&#8358;25k</div></div>
-      <div class="addon fade-up"><div class="addon-n">Additional Static Set</div><div class="addon-d">4 branded statics outside retainer scope. 1 revision round included.</div><div class="addon-p">&#8358;20k</div></div>
-      <div class="addon fade-up"><div class="addon-n">Standalone Brand Identity</div><div class="addon-d">Logo, palette, typography, usage guide. 2 concept rounds included.</div><div class="addon-p">&#8358;150k</div></div>
-      <div class="addon fade-up"><div class="addon-n">Additional Shoot Day</div><div class="addon-d">Full production day for extra content volume. Half-day option available.</div><div class="addon-p">&#8358;120k / &#8358;70k</div></div>
+</section>
+
+<!-- 5. RESULTS -->
+<section class="sv-res">
+  <div class="sv-wrap sv-res-g">
+    <div>
+      <div class="sv-letter">Results</div>
+      <h2>Proof From<br/>Real Accounts.</h2>
+      <p>Every figure comes from live ad accounts and client dashboards. Where a number is total business revenue rather than revenue we drove, we say so.</p>
+      <a href="results.html" class="sv-btn line">See case studies &rarr;</a>
+    </div>
+    <div class="sv-stats">
+      <div class="sv-stat"><div class="n">200<span>+</span></div><div class="l">Qualified B2B leads generated in 30 days</div></div>
+      <div class="sv-stat"><div class="n">65<span>%</span></div><div class="l">Reduction in cost per lead</div><div class="s">Up to 65%, varies by account</div></div>
+      <div class="sv-stat"><div class="n"><span>&#8358;</span>10.9m+</div><div class="l">Ad spend managed</div><div class="s">Meta Ads Manager</div></div>
+      <div class="sv-stat"><div class="n"><span>$</span>3.5k+</div><div class="l">Revenue attributed to new email flows</div><div class="s">First 2 months &middot; Klaviyo &middot; Moelle Zavian</div></div>
     </div>
   </div>
-  <footer><div class="fl">Lead<span>haus</span> Studios</div><p>Content that converts. Systems that scale.</p><p>&copy; 2025 Leadhaus Studios. Lagos, Nigeria.</p></footer>
+</section>
+
+<!-- 6. FINAL CTA -->
+<section class="sv-final">
+  <div class="sv-wrap">
+    <div class="sv-letter">Next Step</div>
+    <h2>Find The Right Support<br/><em>For Your Business.</em></h2>
+    <p>Answer a few questions and we'll point you to the service that fits — or talk it through with us directly.</p>
+    <div class="sv-acts">
+      <a href="ads.html#qual-quiz" class="sv-btn main">Find the Right Service</a>
+      <a href="https://calendly.com/leadhaus/30min" target="_blank" rel="noopener" class="sv-btn line">Book a Discovery Call</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="fl">Lead<span>haus</span> Studios</div><p>Content that converts. Systems that scale.</p><p>&copy; 2025 Leadhaus Studios. Lagos, Nigeria.</p></footer>
 </main>
 <script>
-
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});},{threshold:.1});
-document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
-setTimeout(()=>{document.querySelectorAll('.fade-up').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('show');});},100);
-
-
 var burger=document.getElementById('burger'),mob=document.getElementById('nav-mobile');
 if(burger){burger.addEventListener('click',function(){burger.classList.toggle('open');mob.classList.toggle('open');});}
 if(mob){mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');mob.classList.remove('open');});});}

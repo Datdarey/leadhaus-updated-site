@@ -805,6 +805,8 @@ const BY_CHALLENGE = {
 const PRODUCT_BIZ = ['E-commerce / Product Brand','Beauty / Skincare','Fashion'];
 
 function getRecommendations(category){
+  // HOT leads: one recommendation only (Meta Ads Management) + the strategy call
+  if (category === 'HOT') return ['meta-ads'];
   const v = id => document.getElementById('hid_'+id).value;
   let list = [];
   const add = k => { if (k && SERVICES[k] && list.indexOf(k) === -1) list.push(k); };
@@ -816,7 +818,7 @@ function getRecommendations(category){
     return list.slice(0, 2);
   }
   if (!list.length) add('clarity');
-  return list.slice(0, 3);
+  return list.slice(0, 2);
 }
 function renderRecommendations(stepId, keys){
   const box = document.querySelector('#'+stepId+' [data-recs]');

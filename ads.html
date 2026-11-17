@@ -190,6 +190,16 @@ h2{font-size:clamp(34px,4.4vw,56px);letter-spacing:-.5px;margin-bottom:16px}
 .rec-n{font-family:var(--fd);font-size:18px;font-weight:800;text-transform:uppercase;line-height:1.1}
 .rec-d{font-size:12px;color:var(--stone);margin-top:3px;line-height:1.5}
 .rec-a{font-size:16px;color:var(--stone)}
+.rec{grid-template-columns:28px 1fr;align-items:start}
+.rec:hover{background:none}
+.rec.primary{background:var(--ink-3);padding:20px 18px 22px;border-left:2px solid var(--accent)}
+.rec.primary .rec-n{font-size:22px}
+.rec-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.rec-why{font-size:13px;color:#D9D0C3;margin-top:8px;line-height:1.6}
+.rec.primary .rec-d{font-size:13px;margin-top:6px}
+.rec-cta{margin-top:14px;padding:13px 20px;font-size:13px}
+.rec-link{display:inline-block;margin-top:8px;font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream);text-decoration:none;border-bottom:1px solid var(--accent)}
+.rec-link::after{content:' →'}
 .cal-embed{width:100%;height:680px;border:1px solid var(--line);margin-top:8px;background:#fff}
 .prep-list{list-style:none;display:flex;flex-direction:column;gap:8px;text-align:left;max-width:380px;margin:14px auto 0}
 .prep-list li{font-size:13px;color:#D9D0C3;display:flex;gap:10px}
@@ -480,6 +490,7 @@ h2{font-size:clamp(34px,4.4vw,56px);letter-spacing:-.5px;margin-bottom:16px}
           <button type="button" class="qz-opt" onclick="qzSelect('support_needed','Better ad creative',this)">Better ad creative</button>
           <button type="button" class="qz-opt" onclick="qzSelect('support_needed','Email marketing & retention',this)">Email marketing &amp; retention</button>
           <button type="button" class="qz-opt" onclick="qzSelect('support_needed','A full growth partner',this)">A full growth partner across all of it</button>
+          <button type="button" class="qz-opt" onclick="qzSelect('support_needed','Learn to run ads myself',this)">I want to learn to run ads myself</button>
           <button type="button" class="qz-opt" onclick="qzSelect('support_needed','Not sure yet',this)">Not sure yet — help me decide</button>
         </div>
         <div class="qz-nav"><button type="button" class="qz-back" onclick="qzBack()">&larr; Back</button><span class="qz-count">Step 6 of 8</span></div>
@@ -597,8 +608,10 @@ h2{font-size:clamp(34px,4.4vw,56px);letter-spacing:-.5px;margin-bottom:16px}
           <h3>We May Not Be The Right Fit Just Yet</h3>
           <p>Based on your answers, the timing or current stage isn't quite right for a strategy call yet — and we'd rather tell you that directly than fill a slot that isn't useful to you. Your answers are saved, and we'll follow up if that changes.</p>
           <div class="qz-recs" data-recs></div>
-          <p>In the meantime, our <a href="packages.html" style="color:var(--accent)">Performance Marketing Playbook</a> walks through the fundamentals we'd otherwise cover on a call — a good next step before applying again.</p>
-          <a class="btn btn-line" href="packages.html">See The Playbook</a>
+          <div data-static-playbook>
+            <p>In the meantime, our <a href="https://nestuge.com/leadhausplaybook" target="_blank" rel="noopener" data-product="playbook" data-place="static" style="color:var(--accent)">Performance Marketing Playbook</a> walks through the fundamentals we'd otherwise cover on a call — a good next step before applying again.</p>
+            <a class="btn btn-line" href="https://nestuge.com/leadhausplaybook" target="_blank" rel="noopener" data-product="playbook" data-place="static">Get the Playbook</a>
+          </div>
         </div>
       </div>
 
@@ -787,11 +800,12 @@ function getUTM(name){
 const SERVICES = {
   'meta-ads':    { name:'Meta Ads Management',          desc:'Strategy, creative testing, optimisation and scaling.',                href:'services.html#meta-ads-management' },
   'setup':       { name:'Meta Ads Account Setup',        desc:'Accounts, tracking and campaign structure built right from day one.',  href:'services.html#meta-ads-account-setup' },
-  'audit':       { name:'Ad Account Audit',              desc:'A structured review of campaigns, creative, targeting and tracking.', href:'services.html#ad-account-audit' },
+  'audit':       { name:'Ad Account Audit',              desc:'A professional review of your ad account to find performance problems, wasted spend, structural issues and opportunities.', href:'https://nestuge.com/adauditleadhaus', why:'An expert look at your account before you invest more in advertising.', cta:'Get Your Ad Account Audited', ev:'ClickAdAccountAudit', product:true },
   'creative':    { name:'Ad Creative Strategy',          desc:'Concepts, hooks and briefs designed to lift ad performance.',          href:'services.html#ad-creative-strategy' },
   'email':       { name:'Email Marketing Setup',         desc:'Welcome, abandoned-checkout and post-purchase flows.',                 href:'services.html#email-marketing-setup' },
   'partnership': { name:'Growth Marketing Partnership',  desc:'Acquisition, creative, conversion and retention under one plan.',      href:'services.html#growth-marketing-partnership' },
-  'clarity':     { name:'Clarity Session',               desc:'A focused consultation to pinpoint your next right step.',             href:'services.html#clarity-session' }
+  'clarity':     { name:'Clarity Session',               desc:'A strategic consultation to get clear on your marketing challenges, advertising strategy and next steps.', href:'https://nestuge.com/claritysessionsleadhaus', why:'Expert guidance on the right approach before you commit to anything bigger.', cta:'Book a Clarity Session', ev:'ClickClaritySession', product:true },
+  'playbook':    { name:'Leadhaus Performance Marketing Playbook', desc:'An educational guide for business owners who want to understand performance marketing and improve how they approach advertising.', href:'https://nestuge.com/leadhausplaybook', why:'Build a solid foundation in performance marketing at your own pace.', cta:'Get the Playbook', ev:'ClickPlaybook', product:true }
 };
 const BY_SUPPORT = {
   'Ongoing ads management':'meta-ads', 'An audit of my current ads':'audit', 'Setting up ads properly':'setup',
@@ -804,10 +818,44 @@ const BY_CHALLENGE = {
 };
 const PRODUCT_BIZ = ['E-commerce / Product Brand','Beauty / Skincare','Fashion'];
 
+/* Nestuge product scenarios (A–E). Returns keys; the reason for each is kept in REC_WHY. */
+let REC_WHY = {};
+const STRUGGLING = ['Getting clicks but not enough sales','Cost per lead/customer is too high',"Campaigns aren't spending effectively","Don't know what's working",'Want to scale but performance drops'];
 function getRecommendations(category){
-  // HOT leads: one recommendation only (Meta Ads Management) + the strategy call
-  if (category === 'HOT') return ['meta-ads'];
   const v = id => document.getElementById('hid_'+id).value;
+  REC_WHY = {};
+  const why = (k, t) => { REC_WHY[k] = t; return k; };
+  const support = v('support_needed'), ch = v('challenge'), goal = v('goal');
+  const running = !!v('ad_spend') && v('ad_spend') !== 'Not currently running ads';
+  const alt = running
+    ? why('audit', 'Not ready for ongoing management yet? An audit of your current account is a smaller first step.')
+    : why('clarity', 'Not ready for ongoing management yet? A clarity session maps out the right first steps.');
+
+  // E — ongoing management: keep the strategy-call route (HOT always lands here)
+  if (category === 'HOT' || ((support === 'Ongoing ads management' || support === 'A full growth partner') && category !== 'LOW-FIT')) {
+    why('meta-ads', 'You want ongoing support and your business is at a stage where that can pay off. Book a call below so we can confirm the fit.');
+    return ['meta-ads', alt];
+  }
+  // C — wants to learn to run ads themselves
+  if (support === 'Learn to run ads myself')
+    return [why('playbook', "You want to run your own ads. The playbook walks you through how we approach performance marketing, so you can apply it yourself.")];
+  // D — has problems but can't pin them down
+  if (support === 'Not sure yet' || ch === 'Other') {
+    const out = [why('clarity', "It's not yet clear what's holding growth back. A clarity session identifies the real problem and the right next step.")];
+    if (running) out.push(why('audit', "Since you're already running ads, an audit adds a detailed look at what's happening inside your account."));
+    return out;
+  }
+  // A — already running ads but struggling (or asked for an audit)
+  if (running && (STRUGGLING.indexOf(ch) !== -1 || support === 'An audit of my current ads' || support === 'Ongoing ads management' || support === 'A full growth partner')) {
+    return [why('audit', "You're already running ads but not getting the results you want. An audit pinpoints wasted spend, structural issues and what to fix first."),
+            why('clarity', 'If you also want direction on your overall strategy, a clarity session maps out the next steps.')];
+  }
+  // B — wants to start but doesn't know where to begin
+  if (!running || ch === "Haven't started advertising yet" || goal === 'Launch paid advertising properly') {
+    return [why('clarity', "You want to start advertising but aren't sure where to begin. A clarity session gives you a clear plan before you spend."),
+            why('playbook', 'Prefer to build your knowledge first? The playbook covers the foundations of performance marketing.')];
+  }
+  // Anything else: the original service matching
   let list = [];
   const add = k => { if (k && SERVICES[k] && list.indexOf(k) === -1) list.push(k); };
   add(BY_SUPPORT[v('support_needed')]);
@@ -823,12 +871,44 @@ function getRecommendations(category){
 function renderRecommendations(stepId, keys){
   const box = document.querySelector('#'+stepId+' [data-recs]');
   if (!box || !keys.length) return;
-  const newTab = stepId !== 'step-lowfit'; // keep the booking calendar open on HOT / WARM
+  const hasCal = !!document.querySelector('#'+stepId+' .cal-embed');
   box.innerHTML = '<div class="rec-hd">Recommended for you</div>' + keys.map((k,i)=>{
-    const s = SERVICES[k];
-    return '<a class="rec" href="'+s.href+'"'+(newTab?' target="_blank" rel="noopener"':'')+'>' +
-      '<span class="rec-i">0'+(i+1)+'</span><span><div class="rec-n">'+s.name+'</div><div class="rec-d">'+s.desc+'</div></span><span class="rec-a">&rarr;</span></a>';
+    const s = SERVICES[k], primary = i === 0;
+    let href = s.href, cta = s.cta || 'Learn more', ext = true;
+    if (k === 'meta-ads' && hasCal) { href = '#'; cta = 'Book your strategy call below'; ext = false; }
+    const link = '<a class="'+(primary ? 'btn btn-main rec-cta' : 'rec-link')+'" href="'+href+'"'+(ext ? ' target="_blank" rel="noopener"' : ' data-to-cal')+
+      (s.ev ? ' data-product="'+k+'" data-place="'+(primary ? 'primary' : 'secondary')+'"' : '')+'>'+cta+'</a>';
+    const reason = (REC_WHY[k] || s.why) ? '<div class="rec-why">'+(REC_WHY[k] || s.why)+'</div>' : '';
+    return '<div class="rec'+(primary ? ' primary' : '')+'">' +
+      '<span class="rec-i">0'+(i+1)+'</span><span>' + (primary && keys.length > 1 ? '<div class="rec-tag">Best fit for you</div>' : '') +
+      '<div class="rec-n">'+s.name+'</div>' + (primary ? '<div class="rec-d">'+s.desc+'</div>' : '') + reason + link + '</span></div>';
   }).join('');
+  box.querySelectorAll('[data-to-cal]').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault(); const f = document.querySelector('#'+stepId+' .cal-embed'); if (f) f.scrollIntoView({behavior:'smooth', block:'start'});
+  }));
+  // hide the low-fit "playbook" paragraph if the playbook is already a recommendation
+  const pb = document.querySelector('#'+stepId+' [data-static-playbook]');
+  if (pb) pb.style.display = keys.indexOf('playbook') !== -1 ? 'none' : '';
+}
+
+/* Product click + recommendation-view tracking (custom events, each fired once).
+   Purchase is NOT fired here: it needs confirmed payment from Nestuge. */
+const productClicked = {};
+document.addEventListener('click', function(e){
+  const a = e.target.closest && e.target.closest('a[data-product]');
+  if (!a) return;
+  const s = SERVICES[a.dataset.product]; if (!s || !s.ev || productClicked[s.ev]) return;
+  productClicked[s.ev] = true;
+  const p = { content_name: s.name, placement: a.dataset.place || 'secondary', lead_category: document.getElementById('hid_lead_category').value, funnel: 'ads' };
+  if (typeof window.fbq === 'function') window.fbq('trackCustom', s.ev, p);
+  if (typeof window.gtag === 'function') window.gtag('event', s.ev.replace(/([a-z])([A-Z])/g, '$1_$2').toLowerCase(), p);
+});
+let recViewed = false;
+function trackRecommendationView(category, keys){
+  if (recViewed) return; recViewed = true;
+  const p = { lead_category: category, recommendations: keys.join(','), funnel: 'ads' };
+  if (typeof window.fbq === 'function') window.fbq('trackCustom', 'ViewServiceRecommendation', p);
+  if (typeof window.gtag === 'function') window.gtag('event', 'view_service_recommendation', p);
 }
 function loadCalendars(stepId){
   document.querySelectorAll('#'+stepId+' iframe[data-src]').forEach(f=>{ if(!f.getAttribute('src')) f.setAttribute('src', f.dataset.src); });
@@ -913,6 +993,7 @@ document.getElementById('qz-form').addEventListener('submit', function(e){
           document.getElementById('step-lowfit').classList.add('active');
           track('low_fit_lead');
         }
+        trackRecommendationView(category, recs);
         qzScrollTop();
       } else { qzShowError(); }
     })
